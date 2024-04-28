@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,75 @@ namespace Practica_final_PVA
 {
     public partial class Form1 : Form
     {
+        private SqlConnection conexion = new SqlConnection("server=(local)\\SQLEXPRESS;database=master; Integrated Security=SSPI");
+
         public Form1()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
+        }
+
+        private void iniciarSesion(string Dni, string contrasena)
+        {
+
+            string consulta = "";
+            int resultado = 0;
+
+            if(rbAdmin.Checked)
+            {
+                consulta = "SELECT COUNT(*) FROM Usuarios WHERE Dni = @Dni AND Contrasena = @Contrasena AND Admin = 1";
+            }
+            else if(rbUsuario.Checked)
+            {
+                consulta = "SELECT COUNT(*) FROM Usuarios WHERE Dni = @Dni AND Contrasena = @Contrasena AND Admin = 0";
+            }
+            else
+            {
+                MessageBox.Show("Por favor seleccione el tipo de usuario");
+                return;
+            }
+
+            SqlCommand comando = new SqlCommand(consulta,conexion);
+
+            comando.Parameters.AddWithValue("@Dni",Dni);
+            comando.Parameters.AddWithValue("@Contrasena", contrasena);
+
+            conexion.Open();
+
+            resultado = (int)comando.ExecuteScalar();
+
+            if(resultado > 0)
+            {
+                MessageBox.Show("Inicio de sesion exitoso");
+            }
+            else
+            {
+                MessageBox.Show("Dni o contraseña incorrectos");
+            }
+
+            conexion.Close();
+        }
+
+        private void btnIniciarSesion_Click(object sender, EventArgs e)
+        {
+            string dni, contrasena;
+            
+            dni = txtDni.Text;
+            contrasena = txtContrasena.Text;
+
+            iniciarSesion(dni, contrasena);
+        }
+
+        private void cbMostrar_CheckedChanged(object sender, EventArgs e)
+        {
+            if (txtContrasena.PasswordChar == '*')
+            {
+                txtContrasena.PasswordChar = '\0';
+            }
+            else
+            {
+                txtContrasena.PasswordChar = '*';
+            }
         }
     }
 }
