@@ -14,7 +14,7 @@ namespace Practica_final_PVA
     public partial class Form1 : Form
     {
         private SqlConnection conexion = new SqlConnection("server=(local)\\SQLEXPRESS;database=master; Integrated Security=SSPI");
-
+        
         public Form1()
         {
             InitializeComponent();
@@ -50,9 +50,19 @@ namespace Practica_final_PVA
 
             resultado = (int)comando.ExecuteScalar();
 
-            if(resultado > 0)
+            if(resultado > 0 && rbAdmin.Checked)
             {
-                MessageBox.Show("Inicio de sesion exitoso");
+               if(gestorSesion.inicioSesion(Dni, contrasena, true))
+               {
+                    Console.WriteLine("Exito en el inicio de sesión");
+               }
+            }
+            else if(resultado > 0 && rbUsuario.Checked)
+            {
+                if (gestorSesion.inicioSesion(Dni, contrasena, false))
+                {
+                    Console.WriteLine("Exito en el inicio de sesion");
+                }
             }
             else
             {
