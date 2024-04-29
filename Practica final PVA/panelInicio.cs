@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,10 +13,19 @@ namespace Practica_final_PVA
 {
     public partial class panelInicio : Form
     {
-        private int indiceIL1 = 0; //Indices de imagen del imagelist de top ventas
+        // Conexion con la base de datos
+        private SqlConnection conexion = new SqlConnection("server=(local)\\SQLEXPRESS;database=master; Integrated Security=SSPI");
+
+        //Indices de imagen del imagelist de top ventas
+        private int indiceIL1 = 0; 
         private int indiceIL2 = 0;
         private int indiceIL3 = 0;
-        
+
+        // Tabla de datos donde almacenar los ingredientes extraidos de la base de datos
+        private DataTable ingredientes = new DataTable();
+
+        // Objeto sandwich para poder montarlo a gusto
+        Sandwich sandwich = new Sandwich();
         public panelInicio()
         {
             InitializeComponent();
@@ -30,12 +40,55 @@ namespace Practica_final_PVA
             lbTopVentas1.Enabled = false;
             lbTopVentas2.Enabled = false;
             lbTopVentas3.Enabled = false;
+
+            cargarIngredientes();
         }
 
         private void PaginaInicio_Closed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }
+
+        private void cargarIngredientes()
+        {
+            string Consulta = "SELECT Nombre, Tipo, Precio FROM INGREDIENTES;";
+            SqlCommand comando = new SqlCommand(Consulta,conexion);
+            
+            // Este adaptador de datos sirve para llenar la tabla de ingredientes
+            SqlDataAdapter adaptador = new SqlDataAdapter(comando);
+            adaptador.Fill(ingredientes);
+
+            foreach(DataRow fila in ingredientes.Rows)
+            {
+                string nombre = fila["Nombre"].ToString();
+                int tipo = (int)fila["Tipo"];
+
+                switch (tipo)
+                {
+                    case 1:
+                        cbProteina.Items.Add(nombre);
+                        break;
+                    
+                    case 2:
+                        cbVerdura.Items.Add(nombre);
+                        break;
+
+                    case 3:
+                        cbqueso.Items.Add(nombre);
+                        break;
+
+                    case 4:
+                        cbSalsa.Items.Add(nombre);
+                        break;
+
+                    default:
+                        MessageBox.Show("Error cargando los ingredientes.");
+                        break;
+                }
+
+            }
+        }
+
         private void cambiar_imagenes(object sender, EventArgs e)
         {
             if(indiceIL1 == ilTopVentas1.Images.Count - 1)
@@ -158,6 +211,99 @@ namespace Practica_final_PVA
                     lbTopVentas3.Items.Add("Espaguetis carbonara");
                     break;
             }
+        }
+
+        private void anadirIngredientes()
+        {
+
+            string nombreProte, nombreVerdu, nombreQueso, nombreSalsa;
+            int numProte, numVerdu, numQueso, numSalsa;
+
+            nombreProte = cbProteina.Text;
+            numProte = (int)udProteina.Value;
+
+            nombreVerdu = cbVerdura.Text;
+            numVerdu = (int)udVerdura.Value;
+
+            nombreQueso = cbqueso.Text;
+            numQueso = (int)udQueso.Value;
+
+            nombreSalsa = cbSalsa.Text;
+            numSalsa = (int)udSalsa.Value;
+            
+            if(nombreProte != "" & numProte > 0)
+            {
+                Ingrediente Proteina = new Ingrediente(nombreProte, ObtenerPrecio(nombreProte), 1, numProte);
+                sandwich.agregarIngrediente(Proteina);
+
+                ListViewItem prote = new ListViewItem(new[] { nombreProte, numProte.ToString(), ObtenerPrecio(nombreProte).ToString() });
+                lvSandwich.Items.Add(prote);
+            }
+            
+            if(nombreVerdu != "" & numVerdu > 0)
+            {
+                Ingrediente Verdura = new Ingrediente(nombreVerdu, ObtenerPrecio(nombreVerdu), 2, numVerdu);
+                sandwich.agregarIngrediente(Verdura);
+
+                ListViewItem verdu = new ListViewItem(new[] { nombreVerdu, numVerdu.ToString(), ObtenerPrecio(nombreVerdu).ToString() });
+                lvSandwich.Items.Add(verdu);
+            }
+
+            if(nombreQueso != "" & numQueso > 0)
+            {
+                Ingrediente Queso = new Ingrediente(nombreQueso, ObtenerPrecio(nombreQueso), 3, numQueso);
+                sandwich.agregarIngrediente(Queso);
+
+                ListViewItem queso = new ListViewItem(new[] { nombreQueso, numQueso.ToString(), ObtenerPrecio(nombreQueso).ToString() });
+                lvSandwich.Items.Add(queso);
+            }
+            
+            if(nombreSalsa != "" & numSalsa > 0)
+            {
+                Ingrediente Salsa = new Ingrediente(nombreSalsa, ObtenerPrecio(nombreSalsa), 4, numSalsa);
+                sandwich.agregarIngrediente(Salsa);
+
+                ListViewItem salsa = new ListViewItem(new[] { nombreSalsa, numSalsa.ToString(), ObtenerPrecio(nombreSalsa).ToString() });
+                lvSandwich.Items.Add(salsa);
+            }
+
+            float precioTotal = sandwich.calcularPrecio();
+            lblPrecioTotal.Text = precioTotal.ToString();
+        }
+
+        // Método para obtener el precio de un ingrediente por su nombre
+        private float ObtenerPrecio(string nombre)
+        {
+            DataRow[] rows = ingredientes.Select($"Nombre = '{nombre}'");
+            if (rows.Length > 0)
+            {
+                return Convert.ToSingle(rows[0]["Precio"]);
+            }
+            return 0.0f;
+        }
+
+        // Método para obtener el tipo de un ingrediente por su nombre
+        private int ObtenerTipo(string nombre)
+        {
+            DataRow[] rows = ingredientes.Select($"Nombre = '{nombre}'");
+            if (rows.Length > 0)
+            {
+                return Convert.ToInt32(rows[0]["Tipo"]);
+            }
+            return 0; 
+        }
+
+        private void btnAnadir_Click(object sender, EventArgs e)
+        {
+            anadirIngredientes();
+            cbProteina.SelectedIndex = -1;
+            cbVerdura.SelectedIndex = -1;
+            cbqueso.SelectedIndex = -1;
+            cbSalsa.SelectedIndex = -1;
+            udProteina.Value = 0;
+            udVerdura.Value = 0;
+            udQueso.Value = 0;
+            udSalsa.Value = 0;
         }
     }
 }

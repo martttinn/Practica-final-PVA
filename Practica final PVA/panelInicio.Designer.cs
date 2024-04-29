@@ -49,19 +49,36 @@
             this.label4 = new System.Windows.Forms.Label();
             this.lbTopVentas3 = new System.Windows.Forms.ListBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.cbIngredientes = new System.Windows.Forms.ComboBox();
+            this.cbProteina = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnAnadir = new System.Windows.Forms.Button();
+            this.cbVerdura = new System.Windows.Forms.ComboBox();
+            this.cbqueso = new System.Windows.Forms.ComboBox();
+            this.cbSalsa = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtcantidad = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.btnEliminar = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.udProteina = new System.Windows.Forms.NumericUpDown();
+            this.udVerdura = new System.Windows.Forms.NumericUpDown();
+            this.udQueso = new System.Windows.Forms.NumericUpDown();
+            this.udSalsa = new System.Windows.Forms.NumericUpDown();
+            this.btnAnadir = new System.Windows.Forms.Button();
+            this.lvSandwich = new System.Windows.Forms.ListView();
+            this.Ingrediente = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Cantidad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Precio_Unidad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label11 = new System.Windows.Forms.Label();
+            this.lblPrecioTotal = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbTopVentas1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbTopVentas2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbTopVentas3)).BeginInit();
             this.gbTopVentas1.SuspendLayout();
             this.gbTopVentas2.SuspendLayout();
             this.gbTopVentas3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.udProteina)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.udVerdura)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.udQueso)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.udSalsa)).BeginInit();
             this.SuspendLayout();
             // 
             // pbTopVentas1
@@ -278,71 +295,183 @@
             this.label5.TabIndex = 7;
             this.label5.Text = "MONTA TU SANDWICH";
             // 
-            // cbIngredientes
+            // cbProteina
             // 
-            this.cbIngredientes.FormattingEnabled = true;
-            this.cbIngredientes.Location = new System.Drawing.Point(23, 649);
-            this.cbIngredientes.Name = "cbIngredientes";
-            this.cbIngredientes.Size = new System.Drawing.Size(121, 24);
-            this.cbIngredientes.TabIndex = 8;
+            this.cbProteina.FormattingEnabled = true;
+            this.cbProteina.Location = new System.Drawing.Point(23, 685);
+            this.cbProteina.Name = "cbProteina";
+            this.cbProteina.Size = new System.Drawing.Size(121, 24);
+            this.cbProteina.TabIndex = 8;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Audi Type", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Audi Type", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(173)))), ((int)(((byte)(45)))));
-            this.label6.Location = new System.Drawing.Point(19, 616);
+            this.label6.Location = new System.Drawing.Point(19, 620);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(113, 21);
+            this.label6.Size = new System.Drawing.Size(144, 25);
             this.label6.TabIndex = 4;
-            this.label6.Text = "Ingrediente:";
+            this.label6.Text = "Ingredientes:";
             // 
-            // btnAnadir
+            // cbVerdura
             // 
-            this.btnAnadir.Location = new System.Drawing.Point(69, 725);
-            this.btnAnadir.Name = "btnAnadir";
-            this.btnAnadir.Size = new System.Drawing.Size(75, 23);
-            this.btnAnadir.TabIndex = 9;
-            this.btnAnadir.Text = "Añadir";
-            this.btnAnadir.UseVisualStyleBackColor = true;
+            this.cbVerdura.FormattingEnabled = true;
+            this.cbVerdura.Location = new System.Drawing.Point(23, 753);
+            this.cbVerdura.Name = "cbVerdura";
+            this.cbVerdura.Size = new System.Drawing.Size(121, 24);
+            this.cbVerdura.TabIndex = 14;
+            // 
+            // cbqueso
+            // 
+            this.cbqueso.FormattingEnabled = true;
+            this.cbqueso.Location = new System.Drawing.Point(23, 821);
+            this.cbqueso.Name = "cbqueso";
+            this.cbqueso.Size = new System.Drawing.Size(121, 24);
+            this.cbqueso.TabIndex = 15;
+            // 
+            // cbSalsa
+            // 
+            this.cbSalsa.FormattingEnabled = true;
+            this.cbSalsa.Location = new System.Drawing.Point(24, 889);
+            this.cbSalsa.Name = "cbSalsa";
+            this.cbSalsa.Size = new System.Drawing.Size(121, 24);
+            this.cbSalsa.TabIndex = 16;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Audi Type", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(173)))), ((int)(((byte)(45)))));
-            this.label7.Location = new System.Drawing.Point(19, 692);
+            this.label7.Font = new System.Drawing.Font("Audi Type", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(96)))), ((int)(((byte)(19)))));
+            this.label7.Location = new System.Drawing.Point(20, 661);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(90, 21);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "Cantidad:";
-            // 
-            // txtcantidad
-            // 
-            this.txtcantidad.Location = new System.Drawing.Point(23, 725);
-            this.txtcantidad.Name = "txtcantidad";
-            this.txtcantidad.Size = new System.Drawing.Size(23, 22);
-            this.txtcantidad.TabIndex = 11;
+            this.label7.Size = new System.Drawing.Size(79, 21);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Proteina";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Audi Type", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(173)))), ((int)(((byte)(45)))));
-            this.label8.Location = new System.Drawing.Point(19, 775);
+            this.label8.Font = new System.Drawing.Font("Audi Type", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(96)))), ((int)(((byte)(19)))));
+            this.label8.Location = new System.Drawing.Point(20, 729);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(94, 21);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "Modificar:";
+            this.label8.Size = new System.Drawing.Size(75, 21);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "Verdura";
             // 
-            // btnEliminar
+            // label9
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(23, 812);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(86, 23);
-            this.btnEliminar.TabIndex = 13;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Audi Type", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(96)))), ((int)(((byte)(19)))));
+            this.label9.Location = new System.Drawing.Point(20, 797);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(61, 21);
+            this.label9.TabIndex = 19;
+            this.label9.Text = "Queso";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Audi Type", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(96)))), ((int)(((byte)(19)))));
+            this.label10.Location = new System.Drawing.Point(20, 865);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(53, 21);
+            this.label10.TabIndex = 20;
+            this.label10.Text = "Salsa";
+            // 
+            // udProteina
+            // 
+            this.udProteina.Location = new System.Drawing.Point(164, 686);
+            this.udProteina.Name = "udProteina";
+            this.udProteina.Size = new System.Drawing.Size(39, 22);
+            this.udProteina.TabIndex = 21;
+            // 
+            // udVerdura
+            // 
+            this.udVerdura.Location = new System.Drawing.Point(164, 753);
+            this.udVerdura.Name = "udVerdura";
+            this.udVerdura.Size = new System.Drawing.Size(39, 22);
+            this.udVerdura.TabIndex = 22;
+            // 
+            // udQueso
+            // 
+            this.udQueso.Location = new System.Drawing.Point(164, 821);
+            this.udQueso.Name = "udQueso";
+            this.udQueso.Size = new System.Drawing.Size(39, 22);
+            this.udQueso.TabIndex = 23;
+            // 
+            // udSalsa
+            // 
+            this.udSalsa.Location = new System.Drawing.Point(164, 891);
+            this.udSalsa.Name = "udSalsa";
+            this.udSalsa.Size = new System.Drawing.Size(39, 22);
+            this.udSalsa.TabIndex = 24;
+            // 
+            // btnAnadir
+            // 
+            this.btnAnadir.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAnadir.Location = new System.Drawing.Point(24, 938);
+            this.btnAnadir.Name = "btnAnadir";
+            this.btnAnadir.Size = new System.Drawing.Size(179, 30);
+            this.btnAnadir.TabIndex = 25;
+            this.btnAnadir.Text = "Añadir";
+            this.btnAnadir.UseVisualStyleBackColor = true;
+            this.btnAnadir.Click += new System.EventHandler(this.btnAnadir_Click);
+            // 
+            // lvSandwich
+            // 
+            this.lvSandwich.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Ingrediente,
+            this.Cantidad,
+            this.Precio_Unidad});
+            this.lvSandwich.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvSandwich.HideSelection = false;
+            this.lvSandwich.Location = new System.Drawing.Point(309, 620);
+            this.lvSandwich.Name = "lvSandwich";
+            this.lvSandwich.Size = new System.Drawing.Size(478, 348);
+            this.lvSandwich.TabIndex = 26;
+            this.lvSandwich.UseCompatibleStateImageBehavior = false;
+            this.lvSandwich.View = System.Windows.Forms.View.Details;
+            // 
+            // Ingrediente
+            // 
+            this.Ingrediente.Text = "Ingrediente";
+            this.Ingrediente.Width = 140;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.Text = "Cantidad";
+            this.Cantidad.Width = 140;
+            // 
+            // Precio_Unidad
+            // 
+            this.Precio_Unidad.Text = "Precio unitario";
+            this.Precio_Unidad.Width = 180;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Audi Type", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(173)))), ((int)(((byte)(45)))));
+            this.label11.Location = new System.Drawing.Point(304, 987);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(177, 25);
+            this.label11.TabIndex = 27;
+            this.label11.Text = "PRECIO TOTAL: €";
+            // 
+            // lblPrecioTotal
+            // 
+            this.lblPrecioTotal.AutoSize = true;
+            this.lblPrecioTotal.Font = new System.Drawing.Font("Audi Type", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecioTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(173)))), ((int)(((byte)(45)))));
+            this.lblPrecioTotal.Location = new System.Drawing.Point(477, 987);
+            this.lblPrecioTotal.Name = "lblPrecioTotal";
+            this.lblPrecioTotal.Size = new System.Drawing.Size(25, 25);
+            this.lblPrecioTotal.TabIndex = 28;
+            this.lblPrecioTotal.Text = "0";
             // 
             // panelInicio
             // 
@@ -350,13 +479,23 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(30)))), ((int)(((byte)(11)))));
             this.ClientSize = new System.Drawing.Size(901, 1055);
-            this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.txtcantidad);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.lblPrecioTotal);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.lvSandwich);
             this.Controls.Add(this.btnAnadir);
+            this.Controls.Add(this.udSalsa);
+            this.Controls.Add(this.udQueso);
+            this.Controls.Add(this.udVerdura);
+            this.Controls.Add(this.udProteina);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.cbSalsa);
+            this.Controls.Add(this.cbqueso);
+            this.Controls.Add(this.cbVerdura);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.cbIngredientes);
+            this.Controls.Add(this.cbProteina);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.gbTopVentas3);
             this.Controls.Add(this.gbTopVentas2);
@@ -375,6 +514,10 @@
             this.gbTopVentas2.PerformLayout();
             this.gbTopVentas3.ResumeLayout(false);
             this.gbTopVentas3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.udProteina)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.udVerdura)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.udQueso)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.udSalsa)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -401,12 +544,25 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ListBox lbTopVentas3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox cbIngredientes;
+        private System.Windows.Forms.ComboBox cbProteina;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button btnAnadir;
+        private System.Windows.Forms.ComboBox cbVerdura;
+        private System.Windows.Forms.ComboBox cbqueso;
+        private System.Windows.Forms.ComboBox cbSalsa;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtcantidad;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.NumericUpDown udProteina;
+        private System.Windows.Forms.NumericUpDown udVerdura;
+        private System.Windows.Forms.NumericUpDown udQueso;
+        private System.Windows.Forms.NumericUpDown udSalsa;
+        private System.Windows.Forms.Button btnAnadir;
+        private System.Windows.Forms.ListView lvSandwich;
+        private System.Windows.Forms.ColumnHeader Ingrediente;
+        private System.Windows.Forms.ColumnHeader Cantidad;
+        private System.Windows.Forms.ColumnHeader Precio_Unidad;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblPrecioTotal;
     }
 }
