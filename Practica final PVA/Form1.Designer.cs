@@ -38,6 +38,8 @@
             this.rbAdmin = new System.Windows.Forms.RadioButton();
             this.rbUsuario = new System.Windows.Forms.RadioButton();
             this.cbMostrar = new System.Windows.Forms.CheckBox();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -45,7 +47,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Rockwell Condensed", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(234)))));
-            this.label1.Location = new System.Drawing.Point(116, 11);
+            this.label1.Location = new System.Drawing.Point(100, 139);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(320, 30);
             this.label1.TabIndex = 0;
@@ -53,7 +55,7 @@
             // 
             // txtDni
             // 
-            this.txtDni.Location = new System.Drawing.Point(188, 81);
+            this.txtDni.Location = new System.Drawing.Point(172, 209);
             this.txtDni.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDni.Name = "txtDni";
             this.txtDni.Size = new System.Drawing.Size(175, 22);
@@ -61,7 +63,7 @@
             // 
             // txtContrasena
             // 
-            this.txtContrasena.Location = new System.Drawing.Point(188, 119);
+            this.txtContrasena.Location = new System.Drawing.Point(172, 247);
             this.txtContrasena.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.PasswordChar = '*';
@@ -73,7 +75,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(173)))), ((int)(((byte)(45)))));
-            this.label2.Location = new System.Drawing.Point(117, 81);
+            this.label2.Location = new System.Drawing.Point(101, 209);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 20);
             this.label2.TabIndex = 3;
@@ -84,7 +86,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(173)))), ((int)(((byte)(45)))));
-            this.label3.Location = new System.Drawing.Point(53, 119);
+            this.label3.Location = new System.Drawing.Point(37, 247);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(105, 20);
             this.label3.TabIndex = 4;
@@ -92,7 +94,7 @@
             // 
             // btnIniciarSesion
             // 
-            this.btnIniciarSesion.Location = new System.Drawing.Point(188, 230);
+            this.btnIniciarSesion.Location = new System.Drawing.Point(172, 358);
             this.btnIniciarSesion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnIniciarSesion.Name = "btnIniciarSesion";
             this.btnIniciarSesion.Size = new System.Drawing.Size(173, 34);
@@ -106,7 +108,7 @@
             this.rbAdmin.AutoSize = true;
             this.rbAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbAdmin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(96)))), ((int)(((byte)(19)))));
-            this.rbAdmin.Location = new System.Drawing.Point(197, 193);
+            this.rbAdmin.Location = new System.Drawing.Point(181, 321);
             this.rbAdmin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbAdmin.Name = "rbAdmin";
             this.rbAdmin.Size = new System.Drawing.Size(71, 20);
@@ -120,7 +122,7 @@
             this.rbUsuario.AutoSize = true;
             this.rbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(96)))), ((int)(((byte)(19)))));
-            this.rbUsuario.Location = new System.Drawing.Point(277, 193);
+            this.rbUsuario.Location = new System.Drawing.Point(261, 321);
             this.rbUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbUsuario.Name = "rbUsuario";
             this.rbUsuario.Size = new System.Drawing.Size(82, 20);
@@ -134,7 +136,7 @@
             this.cbMostrar.AutoSize = true;
             this.cbMostrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbMostrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(96)))), ((int)(((byte)(19)))));
-            this.cbMostrar.Location = new System.Drawing.Point(188, 146);
+            this.cbMostrar.Location = new System.Drawing.Point(172, 274);
             this.cbMostrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbMostrar.Name = "cbMostrar";
             this.cbMostrar.Size = new System.Drawing.Size(162, 20);
@@ -143,12 +145,23 @@
             this.cbMostrar.UseVisualStyleBackColor = true;
             this.cbMostrar.CheckedChanged += new System.EventHandler(this.cbMostrar_CheckedChanged);
             // 
+            // pbLogo
+            // 
+            this.pbLogo.Image = global::Practica_final_PVA.Properties.Resources.icono_imagen;
+            this.pbLogo.Location = new System.Drawing.Point(181, 3);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(153, 133);
+            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbLogo.TabIndex = 9;
+            this.pbLogo.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(30)))), ((int)(((byte)(11)))));
-            this.ClientSize = new System.Drawing.Size(537, 294);
+            this.ClientSize = new System.Drawing.Size(501, 427);
+            this.Controls.Add(this.pbLogo);
             this.Controls.Add(this.cbMostrar);
             this.Controls.Add(this.rbUsuario);
             this.Controls.Add(this.rbAdmin);
@@ -162,6 +175,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Sandwich Sprint - Iniciar sesión";
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -178,6 +192,7 @@
         private System.Windows.Forms.RadioButton rbAdmin;
         private System.Windows.Forms.RadioButton rbUsuario;
         private System.Windows.Forms.CheckBox cbMostrar;
+        private System.Windows.Forms.PictureBox pbLogo;
     }
 }
 
