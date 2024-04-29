@@ -55,13 +55,19 @@ namespace Practica_final_PVA
                if(gestorSesion.inicioSesion(Dni, contrasena, true))
                {
                     Console.WriteLine("Exito en el inicio de sesión");
-               }
+                    panelInicio formInicio = new panelInicio();
+                    formInicio.Show();
+                    this.Hide();
+                }
             }
             else if(resultado > 0 && rbUsuario.Checked)
             {
                 if (gestorSesion.inicioSesion(Dni, contrasena, false))
                 {
                     Console.WriteLine("Exito en el inicio de sesion");
+                    panelInicio formInicio = new panelInicio();
+                    formInicio.Show();
+                    this.Hide();
                 }
             }
             else

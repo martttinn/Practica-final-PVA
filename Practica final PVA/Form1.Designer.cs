@@ -47,15 +47,15 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Rockwell Condensed", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(234)))));
-            this.label1.Location = new System.Drawing.Point(100, 139);
+            this.label1.Location = new System.Drawing.Point(169, 139);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(320, 30);
+            this.label1.Size = new System.Drawing.Size(174, 30);
             this.label1.TabIndex = 0;
-            this.label1.Text = "PORTAL DE INICIO DE SESIÓN";
+            this.label1.Text = "INICIAR SESION";
             // 
             // txtDni
             // 
-            this.txtDni.Location = new System.Drawing.Point(172, 209);
+            this.txtDni.Location = new System.Drawing.Point(174, 201);
             this.txtDni.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDni.Name = "txtDni";
             this.txtDni.Size = new System.Drawing.Size(175, 22);
@@ -63,7 +63,7 @@
             // 
             // txtContrasena
             // 
-            this.txtContrasena.Location = new System.Drawing.Point(172, 247);
+            this.txtContrasena.Location = new System.Drawing.Point(174, 239);
             this.txtContrasena.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.PasswordChar = '*';
@@ -73,45 +73,46 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Audi Type", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(173)))), ((int)(((byte)(45)))));
-            this.label2.Location = new System.Drawing.Point(101, 209);
+            this.label2.Location = new System.Drawing.Point(112, 200);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 20);
+            this.label2.Size = new System.Drawing.Size(42, 21);
             this.label2.TabIndex = 3;
             this.label2.Text = "DNI";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Audi Type", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(173)))), ((int)(((byte)(45)))));
-            this.label3.Location = new System.Drawing.Point(37, 247);
+            this.label3.Location = new System.Drawing.Point(52, 238);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 20);
+            this.label3.Size = new System.Drawing.Size(102, 21);
             this.label3.TabIndex = 4;
             this.label3.Text = "Contraseña";
             // 
             // btnIniciarSesion
             // 
-            this.btnIniciarSesion.Location = new System.Drawing.Point(172, 358);
+            this.btnIniciarSesion.Font = new System.Drawing.Font("Audi Type", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIniciarSesion.Location = new System.Drawing.Point(174, 350);
             this.btnIniciarSesion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnIniciarSesion.Name = "btnIniciarSesion";
             this.btnIniciarSesion.Size = new System.Drawing.Size(173, 34);
             this.btnIniciarSesion.TabIndex = 5;
-            this.btnIniciarSesion.Text = "Iniciar sesion";
+            this.btnIniciarSesion.Text = "Confirmar";
             this.btnIniciarSesion.UseVisualStyleBackColor = true;
             this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
             // 
             // rbAdmin
             // 
             this.rbAdmin.AutoSize = true;
-            this.rbAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbAdmin.Font = new System.Drawing.Font("Audi Type", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbAdmin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(96)))), ((int)(((byte)(19)))));
-            this.rbAdmin.Location = new System.Drawing.Point(181, 321);
+            this.rbAdmin.Location = new System.Drawing.Point(183, 313);
             this.rbAdmin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbAdmin.Name = "rbAdmin";
-            this.rbAdmin.Size = new System.Drawing.Size(71, 20);
+            this.rbAdmin.Size = new System.Drawing.Size(70, 20);
             this.rbAdmin.TabIndex = 6;
             this.rbAdmin.TabStop = true;
             this.rbAdmin.Text = "Admin";
@@ -120,12 +121,12 @@
             // rbUsuario
             // 
             this.rbUsuario.AutoSize = true;
-            this.rbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbUsuario.Font = new System.Drawing.Font("Audi Type", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(96)))), ((int)(((byte)(19)))));
-            this.rbUsuario.Location = new System.Drawing.Point(261, 321);
+            this.rbUsuario.Location = new System.Drawing.Point(263, 313);
             this.rbUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbUsuario.Name = "rbUsuario";
-            this.rbUsuario.Size = new System.Drawing.Size(82, 20);
+            this.rbUsuario.Size = new System.Drawing.Size(75, 20);
             this.rbUsuario.TabIndex = 7;
             this.rbUsuario.TabStop = true;
             this.rbUsuario.Text = "Usuario";
@@ -134,12 +135,12 @@
             // cbMostrar
             // 
             this.cbMostrar.AutoSize = true;
-            this.cbMostrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbMostrar.Font = new System.Drawing.Font("Audi Type", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbMostrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(96)))), ((int)(((byte)(19)))));
-            this.cbMostrar.Location = new System.Drawing.Point(172, 274);
+            this.cbMostrar.Location = new System.Drawing.Point(174, 272);
             this.cbMostrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbMostrar.Name = "cbMostrar";
-            this.cbMostrar.Size = new System.Drawing.Size(162, 20);
+            this.cbMostrar.Size = new System.Drawing.Size(149, 20);
             this.cbMostrar.TabIndex = 8;
             this.cbMostrar.Text = "Mostrar contraseña";
             this.cbMostrar.UseVisualStyleBackColor = true;
