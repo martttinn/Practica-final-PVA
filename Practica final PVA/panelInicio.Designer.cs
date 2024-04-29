@@ -39,15 +39,15 @@
             this.ilTopVentas3 = new System.Windows.Forms.ImageList(this.components);
             this.timerImagenes = new System.Windows.Forms.Timer(this.components);
             this.gbTopVentas1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.lbTopVentas1 = new System.Windows.Forms.ListBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.gbTopVentas2 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.lbTopVentas2 = new System.Windows.Forms.ListBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.gbTopVentas3 = new System.Windows.Forms.GroupBox();
-            this.lbTopVentas3 = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.lbTopVentas3 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbTopVentas1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbTopVentas2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbTopVentas3)).BeginInit();
@@ -78,7 +78,7 @@
             this.lblTopVentas.AutoSize = true;
             this.lblTopVentas.Font = new System.Drawing.Font("Rockwell Condensed", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTopVentas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(234)))));
-            this.lblTopVentas.Location = new System.Drawing.Point(36, 92);
+            this.lblTopVentas.Location = new System.Drawing.Point(12, 21);
             this.lblTopVentas.Name = "lblTopVentas";
             this.lblTopVentas.Size = new System.Drawing.Size(191, 40);
             this.lblTopVentas.TabIndex = 1;
@@ -87,7 +87,7 @@
             // pbTopVentas2
             // 
             this.pbTopVentas2.BackColor = System.Drawing.Color.Transparent;
-            this.pbTopVentas2.Location = new System.Drawing.Point(18, 27);
+            this.pbTopVentas2.Location = new System.Drawing.Point(17, 27);
             this.pbTopVentas2.Name = "pbTopVentas2";
             this.pbTopVentas2.Size = new System.Drawing.Size(180, 180);
             this.pbTopVentas2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -97,7 +97,7 @@
             // pbTopVentas3
             // 
             this.pbTopVentas3.BackColor = System.Drawing.Color.Transparent;
-            this.pbTopVentas3.Location = new System.Drawing.Point(17, 33);
+            this.pbTopVentas3.Location = new System.Drawing.Point(17, 27);
             this.pbTopVentas3.Name = "pbTopVentas3";
             this.pbTopVentas3.Size = new System.Drawing.Size(180, 180);
             this.pbTopVentas3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -134,30 +134,12 @@
             this.gbTopVentas1.Controls.Add(this.pbTopVentas1);
             this.gbTopVentas1.Font = new System.Drawing.Font("Audi Type", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbTopVentas1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(173)))), ((int)(((byte)(45)))));
-            this.gbTopVentas1.Location = new System.Drawing.Point(83, 158);
+            this.gbTopVentas1.Location = new System.Drawing.Point(59, 87);
             this.gbTopVentas1.Name = "gbTopVentas1";
-            this.gbTopVentas1.Size = new System.Drawing.Size(215, 397);
+            this.gbTopVentas1.Size = new System.Drawing.Size(215, 370);
             this.gbTopVentas1.TabIndex = 4;
             this.gbTopVentas1.TabStop = false;
             this.gbTopVentas1.Text = "Sandwich jamon york";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(234)))));
-            this.label1.Location = new System.Drawing.Point(6, 220);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 21);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Ingredientes:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 253);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 21);
-            this.label2.TabIndex = 2;
             // 
             // lbTopVentas1
             // 
@@ -173,8 +155,26 @@
             "Queso Edam"});
             this.lbTopVentas1.Location = new System.Drawing.Point(10, 244);
             this.lbTopVentas1.Name = "lbTopVentas1";
-            this.lbTopVentas1.Size = new System.Drawing.Size(187, 126);
+            this.lbTopVentas1.Size = new System.Drawing.Size(187, 105);
             this.lbTopVentas1.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(13, 253);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 21);
+            this.label2.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(234)))));
+            this.label1.Location = new System.Drawing.Point(6, 220);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(121, 21);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Ingredientes:";
             // 
             // gbTopVentas2
             // 
@@ -183,22 +183,12 @@
             this.gbTopVentas2.Controls.Add(this.pbTopVentas2);
             this.gbTopVentas2.Font = new System.Drawing.Font("Audi Type", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbTopVentas2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(173)))), ((int)(((byte)(45)))));
-            this.gbTopVentas2.Location = new System.Drawing.Point(376, 158);
+            this.gbTopVentas2.Location = new System.Drawing.Point(352, 87);
             this.gbTopVentas2.Name = "gbTopVentas2";
-            this.gbTopVentas2.Size = new System.Drawing.Size(215, 397);
+            this.gbTopVentas2.Size = new System.Drawing.Size(215, 370);
             this.gbTopVentas2.TabIndex = 5;
             this.gbTopVentas2.TabStop = false;
             this.gbTopVentas2.Text = "Sandwich de cebolla";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(234)))));
-            this.label3.Location = new System.Drawing.Point(6, 220);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(121, 21);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Ingredientes:";
             // 
             // lbTopVentas2
             // 
@@ -212,10 +202,20 @@
             "Cebolla",
             "Tomate",
             "Queso Edam"});
-            this.lbTopVentas2.Location = new System.Drawing.Point(11, 244);
+            this.lbTopVentas2.Location = new System.Drawing.Point(10, 244);
             this.lbTopVentas2.Name = "lbTopVentas2";
-            this.lbTopVentas2.Size = new System.Drawing.Size(187, 126);
+            this.lbTopVentas2.Size = new System.Drawing.Size(187, 105);
             this.lbTopVentas2.TabIndex = 4;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(234)))));
+            this.label3.Location = new System.Drawing.Point(6, 220);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(121, 21);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Ingredientes:";
             // 
             // gbTopVentas3
             // 
@@ -223,14 +223,25 @@
             this.gbTopVentas3.Controls.Add(this.label4);
             this.gbTopVentas3.Controls.Add(this.lbTopVentas3);
             this.gbTopVentas3.Controls.Add(this.pbTopVentas3);
-            this.gbTopVentas3.Font = new System.Drawing.Font("Audi Type", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbTopVentas3.Font = new System.Drawing.Font("Audi Type", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbTopVentas3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(173)))), ((int)(((byte)(45)))));
-            this.gbTopVentas3.Location = new System.Drawing.Point(658, 158);
+            this.gbTopVentas3.Location = new System.Drawing.Point(634, 87);
             this.gbTopVentas3.Name = "gbTopVentas3";
-            this.gbTopVentas3.Size = new System.Drawing.Size(215, 397);
+            this.gbTopVentas3.Size = new System.Drawing.Size(215, 370);
             this.gbTopVentas3.TabIndex = 6;
             this.gbTopVentas3.TabStop = false;
             this.gbTopVentas3.Text = "Sandwich de jamon";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Audi Type", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(234)))));
+            this.label4.Location = new System.Drawing.Point(6, 220);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(121, 21);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Ingredientes:";
             // 
             // lbTopVentas3
             // 
@@ -245,33 +256,22 @@
             "Queso Edam"});
             this.lbTopVentas3.Location = new System.Drawing.Point(10, 244);
             this.lbTopVentas3.Name = "lbTopVentas3";
-            this.lbTopVentas3.Size = new System.Drawing.Size(187, 126);
+            this.lbTopVentas3.Size = new System.Drawing.Size(187, 105);
             this.lbTopVentas3.TabIndex = 5;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Audi Type", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(234)))));
-            this.label4.Location = new System.Drawing.Point(6, 216);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(121, 21);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Ingredientes:";
             // 
             // panelInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(30)))), ((int)(((byte)(11)))));
-            this.ClientSize = new System.Drawing.Size(901, 567);
+            this.ClientSize = new System.Drawing.Size(901, 1055);
             this.Controls.Add(this.gbTopVentas3);
             this.Controls.Add(this.gbTopVentas2);
             this.Controls.Add(this.gbTopVentas1);
             this.Controls.Add(this.lblTopVentas);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "panelInicio";
-            this.Text = "Sandwich Sprint - Inicio";
+            this.Text = "git";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PaginaInicio_Closed);
             ((System.ComponentModel.ISupportInitialize)(this.pbTopVentas1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbTopVentas2)).EndInit();

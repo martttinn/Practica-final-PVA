@@ -19,6 +19,8 @@ namespace Practica_final_PVA
         public panelInicio()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
+
             pbTopVentas1.Image = ilTopVentas1.Images[indiceIL1];
             pbTopVentas2.Image = ilTopVentas2.Images[indiceIL2];
             pbTopVentas3.Image = ilTopVentas3.Images[indiceIL3];
@@ -156,8 +158,7 @@ namespace Practica_final_PVA
                     lbTopVentas3.Items.Add("Espaguetis carbonara");
                     break;
             }
-
-
         }
+
     }
 }
