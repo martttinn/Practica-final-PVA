@@ -296,6 +296,7 @@ namespace Practica_final_PVA
         private void btnAnadir_Click(object sender, EventArgs e)
         {
             anadirIngredientes();
+
             cbProteina.SelectedIndex = -1;
             cbVerdura.SelectedIndex = -1;
             cbqueso.SelectedIndex = -1;
@@ -304,6 +305,33 @@ namespace Practica_final_PVA
             udVerdura.Value = 0;
             udQueso.Value = 0;
             udSalsa.Value = 0;
+        }
+
+        private void EliminarIngrediente()
+        {
+            if (lvSandwich.SelectedItems.Count > 0)
+            {
+                string nombre = lvSandwich.SelectedItems[0].Text;
+
+                foreach (ListViewItem item in lvSandwich.SelectedItems)
+                {
+                    lvSandwich.Items.Remove(item);
+                }
+
+                sandwich.eliminarIngrediente(nombre);
+                lblPrecioTotal.Text = (sandwich.calcularPrecio()).ToString();
+                
+            }
+            else
+            {
+                
+                MessageBox.Show("Por favor, selecciona un ingrediente para eliminar.");
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            EliminarIngrediente();
         }
     }
 }

@@ -27,6 +27,21 @@ namespace Practica_final_PVA
             ingredientes.Add(ingrediente);
         }
 
+        public void eliminarIngrediente(string nombre)
+        {
+            Ingrediente ingredienteElim = null;
+
+            foreach(Ingrediente ing in ingredientes)
+            {
+                if(nombre.Equals(ing.getNombre()))
+                {
+                    ingredienteElim = ing;
+                }
+            }
+
+            ingredientes.Remove(ingredienteElim);
+        }
+
         public List<Ingrediente> getIngredientes()
         {
             return ingredientes;
