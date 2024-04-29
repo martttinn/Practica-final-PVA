@@ -55,6 +55,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormularioAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioAdmin.Designer.cs">
+      <DependentUpon>FormularioAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="gestorSesion.cs" />
     <Compile Include="panelInicio.cs">
       <SubType>Form</SubType>
@@ -62,13 +68,25 @@
     <Compile Include="panelInicio.Designer.cs">
       <DependentUpon>panelInicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProductosExistentes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductosExistentes.Designer.cs">
+      <DependentUpon>ProductosExistentes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormularioAdmin.resx">
+      <DependentUpon>FormularioAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="panelInicio.resx">
       <DependentUpon>panelInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductosExistentes.resx">
+      <DependentUpon>ProductosExistentes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -96,6 +114,45 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icono imagen.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_1b28c3f8-6aa5-4007-83eb-3f7c5031a514.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Foto admin.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Foto admin 4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono circulo.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sandwich 1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sandwich 2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sandwich 3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sandwich 4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sandwich 5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sandwich 6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sandwich 7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sandwich 8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sandwich 9.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
