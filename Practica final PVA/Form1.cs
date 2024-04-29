@@ -55,8 +55,8 @@ namespace Practica_final_PVA
                if(gestorSesion.inicioSesion(Dni, contrasena, true))
                {
                     Console.WriteLine("Exito en el inicio de sesión");
-                    panelInicio formInicio = new panelInicio();
-                    formInicio.Show();
+                    FormularioAdmin formAdmin = new FormularioAdmin();
+                    formAdmin.Show();
                     this.Hide();
                 }
             }
