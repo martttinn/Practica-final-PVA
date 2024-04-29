@@ -37,7 +37,7 @@ namespace Practica_final_PVA
             }
             else
             {
-                MessageBox.Show("Por favor seleccione el tipo de usuario");
+                MessageBox.Show("Por favor seleccione el tipo de usuario","Error",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 return;
             }
 
@@ -66,7 +66,7 @@ namespace Practica_final_PVA
             }
             else
             {
-                MessageBox.Show("Dni o contraseña incorrectos");
+                MessageBox.Show("Dni o contraseña incorrectos","Error",MessageBoxButtons.OK,MessageBoxIcon.Stop);
             }
 
             conexion.Close();
