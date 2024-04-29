@@ -20,8 +20,6 @@ namespace Practica_final_PVA
             Contrasena = contrasena;
             Admin = admin;
 
-            MessageBox.Show("VARIABLES DE SESION:\n\nDNI: " + Dni + "\nContraseña :" + Contrasena + "\nAdmin: " + Admin,"Login exitoso",MessageBoxButtons.OK);
-
             return true;
         }
 

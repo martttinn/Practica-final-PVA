@@ -48,6 +48,14 @@
             this.gbTopVentas3 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.lbTopVentas3 = new System.Windows.Forms.ListBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cbIngredientes = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btnAnadir = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtcantidad = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.btnEliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbTopVentas1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbTopVentas2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbTopVentas3)).BeginInit();
@@ -259,12 +267,97 @@
             this.lbTopVentas3.Size = new System.Drawing.Size(187, 105);
             this.lbTopVentas3.TabIndex = 5;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Rockwell Condensed", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(234)))));
+            this.label5.Location = new System.Drawing.Point(12, 544);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(321, 40);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "MONTA TU SANDWICH";
+            // 
+            // cbIngredientes
+            // 
+            this.cbIngredientes.FormattingEnabled = true;
+            this.cbIngredientes.Location = new System.Drawing.Point(23, 649);
+            this.cbIngredientes.Name = "cbIngredientes";
+            this.cbIngredientes.Size = new System.Drawing.Size(121, 24);
+            this.cbIngredientes.TabIndex = 8;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Audi Type", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(173)))), ((int)(((byte)(45)))));
+            this.label6.Location = new System.Drawing.Point(19, 616);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(113, 21);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Ingrediente:";
+            // 
+            // btnAnadir
+            // 
+            this.btnAnadir.Location = new System.Drawing.Point(69, 725);
+            this.btnAnadir.Name = "btnAnadir";
+            this.btnAnadir.Size = new System.Drawing.Size(75, 23);
+            this.btnAnadir.TabIndex = 9;
+            this.btnAnadir.Text = "Añadir";
+            this.btnAnadir.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Audi Type", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(173)))), ((int)(((byte)(45)))));
+            this.label7.Location = new System.Drawing.Point(19, 692);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(90, 21);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "Cantidad:";
+            // 
+            // txtcantidad
+            // 
+            this.txtcantidad.Location = new System.Drawing.Point(23, 725);
+            this.txtcantidad.Name = "txtcantidad";
+            this.txtcantidad.Size = new System.Drawing.Size(23, 22);
+            this.txtcantidad.TabIndex = 11;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Audi Type", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(173)))), ((int)(((byte)(45)))));
+            this.label8.Location = new System.Drawing.Point(19, 775);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(94, 21);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "Modificar:";
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(23, 812);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(86, 23);
+            this.btnEliminar.TabIndex = 13;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            // 
             // panelInicio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(30)))), ((int)(((byte)(11)))));
             this.ClientSize = new System.Drawing.Size(901, 1055);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.txtcantidad);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.btnAnadir);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.cbIngredientes);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.gbTopVentas3);
             this.Controls.Add(this.gbTopVentas2);
             this.Controls.Add(this.gbTopVentas1);
@@ -307,5 +400,13 @@
         private System.Windows.Forms.GroupBox gbTopVentas3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ListBox lbTopVentas3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cbIngredientes;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnAnadir;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtcantidad;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }
