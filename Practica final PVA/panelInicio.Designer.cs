@@ -271,7 +271,7 @@
             this.Controls.Add(this.lblTopVentas);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "panelInicio";
-            this.Text = "git";
+            this.Text = "Sandwich sprint - panel inicio";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PaginaInicio_Closed);
             ((System.ComponentModel.ISupportInitialize)(this.pbTopVentas1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbTopVentas2)).EndInit();
