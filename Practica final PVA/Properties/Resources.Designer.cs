@@ -73,6 +73,46 @@ namespace Practica_final_PVA.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _5aaa66a8_dda6_4885_923e_b485eb32641e {
+            get {
+                object obj = ResourceManager.GetObject("_5aaa66a8-dda6-4885-923e-b485eb32641e", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _9de3c274_0239_444a_b2c0_bdaa3e2c78f2 {
+            get {
+                object obj = ResourceManager.GetObject("_9de3c274-0239-444a-b2c0-bdaa3e2c78f2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _c712b78e_19ee_4e26_9e95_3321ebf1e03b {
+            get {
+                object obj = ResourceManager.GetObject("_c712b78e-19ee-4e26-9e95-3321ebf1e03b", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _fe78f90a_0a69_4c96_9cb8_a70c614de56b {
+            get {
+                object obj = ResourceManager.GetObject("_fe78f90a-0a69-4c96-9cb8-a70c614de56b", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Foto_admin {
             get {
                 object obj = ResourceManager.GetObject("Foto admin", resourceCulture);
@@ -106,6 +146,36 @@ namespace Practica_final_PVA.Properties {
         internal static System.Drawing.Bitmap icono_imagen {
             get {
                 object obj = ResourceManager.GetObject("icono imagen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icono_ipad {
+            get {
+                object obj = ResourceManager.GetObject("icono ipad", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icono_ipad_2 {
+            get {
+                object obj = ResourceManager.GetObject("icono ipad 2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icono_sandwich {
+            get {
+                object obj = ResourceManager.GetObject("icono sandwich", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

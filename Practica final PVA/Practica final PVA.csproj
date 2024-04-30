@@ -156,5 +156,26 @@
   <ItemGroup>
     <None Include="Resources\Sandwich 9.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_9de3c274-0239-444a-b2c0-bdaa3e2c78f2.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono ipad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono ipad 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_c712b78e-19ee-4e26-9e95-3321ebf1e03b.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_fe78f90a-0a69-4c96-9cb8-a70c614de56b.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono sandwich.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_5aaa66a8-dda6-4885-923e-b485eb32641e.jpeg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
