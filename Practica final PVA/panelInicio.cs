@@ -1,4 +1,5 @@
 ﻿using System;
+using Excel = Microsoft.Office.Interop.Excel;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace Practica_final_PVA
 {
@@ -332,6 +334,48 @@ namespace Practica_final_PVA
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             EliminarIngrediente();
+        }
+
+        private void ExportarFactura()
+        {
+            
+            Excel.Application excelApp = new Excel.Application();
+            Excel.Workbook workbook = excelApp.Workbooks.Add();
+            Excel.Worksheet worksheet = workbook.ActiveSheet;
+
+            
+            worksheet.Cells[1, 1] = "Nombre";
+            worksheet.Cells[1, 2] = "Cantidad";
+            worksheet.Cells[1, 3] = "Precio";
+
+            
+            int indiceFila = 2;
+            foreach (ListViewItem item in lvSandwich.Items)
+            {
+                worksheet.Cells[indiceFila, 1] = item.SubItems[0].Text; // Nombre
+                worksheet.Cells[indiceFila, 2] = item.SubItems[1].Text; // Cantidad
+                worksheet.Cells[indiceFila, 3] = item.SubItems[2].Text; // Precio
+                indiceFila++;
+            }
+
+            worksheet.Cells[indiceFila, 1] = "Precio Total:";
+            worksheet.Cells[indiceFila, 3] = lblPrecioTotal.Text;
+
+            
+            string NomArchivo = "Factura.xlsx";
+            workbook.SaveAs(NomArchivo);
+
+            // Cerrar y liberar recursos
+            workbook.Close();
+            excelApp.Quit();
+            System.Runtime.InteropServices.Marshal.ReleaseComObject(excelApp);
+
+            MessageBox.Show("Factura exportada con exito a Excel","Exito",MessageBoxButtons.OK,MessageBoxIcon.Information);
+        }
+
+        private void btnPagar_Click(object sender, EventArgs e)
+        {
+            ExportarFactura();
         }
     }
 }

@@ -532,6 +532,7 @@
             this.btnPagar.TabIndex = 30;
             this.btnPagar.Text = "Pagar";
             this.btnPagar.UseVisualStyleBackColor = true;
+            this.btnPagar.Click += new System.EventHandler(this.btnPagar_Click);
             // 
             // panelInicio
             // 
