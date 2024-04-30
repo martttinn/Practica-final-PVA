@@ -71,6 +71,7 @@
             this.lblPrecioTotal = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnPagar = new System.Windows.Forms.Button();
+            this.btnCerrarSesión = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbTopVentas1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbTopVentas2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbTopVentas3)).BeginInit();
@@ -534,12 +535,23 @@
             this.btnPagar.UseVisualStyleBackColor = true;
             this.btnPagar.Click += new System.EventHandler(this.btnPagar_Click);
             // 
+            // btnCerrarSesión
+            // 
+            this.btnCerrarSesión.Location = new System.Drawing.Point(774, 12);
+            this.btnCerrarSesión.Name = "btnCerrarSesión";
+            this.btnCerrarSesión.Size = new System.Drawing.Size(115, 40);
+            this.btnCerrarSesión.TabIndex = 31;
+            this.btnCerrarSesión.Text = "Cerrar Sesión";
+            this.btnCerrarSesión.UseVisualStyleBackColor = true;
+            this.btnCerrarSesión.Click += new System.EventHandler(this.btnCerrarSesión_Click);
+            // 
             // panelInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(30)))), ((int)(((byte)(11)))));
             this.ClientSize = new System.Drawing.Size(901, 1055);
+            this.Controls.Add(this.btnCerrarSesión);
             this.Controls.Add(this.btnPagar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.gbTopVentas3);
@@ -630,5 +642,6 @@
         private System.Windows.Forms.Label lblPrecioTotal;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnPagar;
+        private System.Windows.Forms.Button btnCerrarSesión;
     }
 }

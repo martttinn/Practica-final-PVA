@@ -377,5 +377,13 @@ namespace Practica_final_PVA
         {
             ExportarFactura();
         }
+
+        private void btnCerrarSesión_Click(object sender, EventArgs e)
+        {
+            gestorSesion.cierreSesion();
+            this.Hide();
+            Form1 form = new Form1();
+            form.Show();
+        }
     }
 }
