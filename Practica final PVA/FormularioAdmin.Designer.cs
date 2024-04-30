@@ -34,9 +34,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.Imagen4 = new System.Windows.Forms.PictureBox();
+            this.Imagen3 = new System.Windows.Forms.PictureBox();
+            this.Imagen2 = new System.Windows.Forms.PictureBox();
             this.Imagen1 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -58,9 +58,9 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Imagen4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Imagen3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Imagen2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Imagen1)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -109,9 +109,9 @@
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Gainsboro;
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.pictureBox4);
-            this.groupBox1.Controls.Add(this.pictureBox3);
-            this.groupBox1.Controls.Add(this.pictureBox2);
+            this.groupBox1.Controls.Add(this.Imagen4);
+            this.groupBox1.Controls.Add(this.Imagen3);
+            this.groupBox1.Controls.Add(this.Imagen2);
             this.groupBox1.Controls.Add(this.Imagen1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(0, 82);
@@ -129,35 +129,37 @@
             this.label5.TabIndex = 13;
             this.label5.Text = "Top ventas";
             // 
-            // pictureBox4
+            // Imagen4
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(142, 150);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(77, 71);
-            this.pictureBox4.TabIndex = 12;
-            this.pictureBox4.TabStop = false;
+            this.Imagen4.Location = new System.Drawing.Point(142, 150);
+            this.Imagen4.Name = "Imagen4";
+            this.Imagen4.Size = new System.Drawing.Size(77, 71);
+            this.Imagen4.TabIndex = 12;
+            this.Imagen4.TabStop = false;
             // 
-            // pictureBox3
+            // Imagen3
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(40, 150);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(77, 71);
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
+            this.Imagen3.Location = new System.Drawing.Point(40, 150);
+            this.Imagen3.Name = "Imagen3";
+            this.Imagen3.Size = new System.Drawing.Size(77, 71);
+            this.Imagen3.TabIndex = 2;
+            this.Imagen3.TabStop = false;
             // 
-            // pictureBox2
+            // Imagen2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(142, 73);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(77, 71);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            this.Imagen2.Location = new System.Drawing.Point(142, 73);
+            this.Imagen2.Name = "Imagen2";
+            this.Imagen2.Size = new System.Drawing.Size(77, 71);
+            this.Imagen2.TabIndex = 1;
+            this.Imagen2.TabStop = false;
             // 
             // Imagen1
             // 
+            this.Imagen1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Imagen1.Location = new System.Drawing.Point(40, 73);
             this.Imagen1.Name = "Imagen1";
             this.Imagen1.Size = new System.Drawing.Size(77, 71);
+            this.Imagen1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Imagen1.TabIndex = 0;
             this.Imagen1.TabStop = false;
             this.Imagen1.Click += new System.EventHandler(this.Imagen1_Click);
@@ -382,9 +384,9 @@
             this.Text = "FormularioAdmin";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Imagen4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Imagen3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Imagen2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Imagen1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -411,9 +413,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox Imagen4;
+        private System.Windows.Forms.PictureBox Imagen3;
+        private System.Windows.Forms.PictureBox Imagen2;
         private System.Windows.Forms.PictureBox Imagen1;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.GroupBox groupBox5;
