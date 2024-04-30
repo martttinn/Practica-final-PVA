@@ -99,5 +99,10 @@ namespace Practica_final_PVA
                 txtContrasena.PasswordChar = '*';
             }
         }
+
+        private void CerrarForm(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
