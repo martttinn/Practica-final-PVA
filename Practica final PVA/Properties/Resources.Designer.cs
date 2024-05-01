@@ -153,6 +153,16 @@ namespace Practica_final_PVA.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icono_imagen1 {
+            get {
+                object obj = ResourceManager.GetObject("icono imagen1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icono_ipad {
             get {
                 object obj = ResourceManager.GetObject("icono ipad", resourceCulture);
