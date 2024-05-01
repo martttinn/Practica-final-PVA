@@ -196,8 +196,19 @@ namespace Practica_final_PVA
             }
         }
 
+        private void btnPerfil_Click(object sender, EventArgs e)
+        {
+            PerfilAdmin perfilAdmin = new PerfilAdmin();
+            perfilAdmin.Show();
+            this.Hide();
+        }
 
-
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form1 form1 = new Form1();
+            form1.Show();
+        }
     }
 
 }

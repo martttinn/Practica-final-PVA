@@ -75,6 +75,12 @@
     <Compile Include="panelInicio.Designer.cs">
       <DependentUpon>panelInicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="PerfilAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerfilAdmin.Designer.cs">
+      <DependentUpon>PerfilAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="PerfilUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="panelInicio.resx">
       <DependentUpon>panelInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerfilAdmin.resx">
+      <DependentUpon>PerfilAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PerfilUsuario.resx">
       <DependentUpon>PerfilUsuario.cs</DependentUpon>
@@ -226,6 +235,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icono imagen1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono persona 2.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

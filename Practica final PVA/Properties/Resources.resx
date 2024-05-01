@@ -121,8 +121,8 @@
   <data name="icono sandwich" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icono sandwich.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_5aaa66a8-dda6-4885-923e-b485eb32641e" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\_5aaa66a8-dda6-4885-923e-b485eb32641e.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icono imagen1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icono imagen1.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Sandwich 8" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sandwich 8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,13 +175,16 @@
   <data name="Sandwich 9" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sandwich 9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="_5aaa66a8-dda6-4885-923e-b485eb32641e" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\_5aaa66a8-dda6-4885-923e-b485eb32641e.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Sandwich 7" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sandwich 7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icono ipad" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icono ipad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icono imagen1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icono imagen1.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icono persona 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icono persona 2.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
