@@ -63,6 +63,12 @@
     </Compile>
     <Compile Include="gestorSesion.cs" />
     <Compile Include="Ingrediente.cs" />
+    <Compile Include="MontaTuSandwich.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MontaTuSandwich.Designer.cs">
+      <DependentUpon>MontaTuSandwich.cs</DependentUpon>
+    </Compile>
     <Compile Include="panelInicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormularioAdmin.resx">
       <DependentUpon>FormularioAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MontaTuSandwich.resx">
+      <DependentUpon>MontaTuSandwich.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="panelInicio.resx">
       <DependentUpon>panelInicio.cs</DependentUpon>

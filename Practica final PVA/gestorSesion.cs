@@ -14,6 +14,22 @@ namespace Practica_final_PVA
         public static bool Admin { get; private set; }
         public static string Contrasena { get; private set; }
 
+
+        public static string getDni()
+        {
+            return Dni;
+        }
+
+        public static bool getAdmin()
+        {
+            return Admin;
+        }
+
+        public static string getContrasena()
+        {
+            return Contrasena;
+        }
+
         public static bool inicioSesion(string dni, string contrasena, bool admin)
         {
             Dni = dni;
