@@ -11,6 +11,7 @@ namespace Practica_final_PVA
     public static class gestorSesion
     {
         public static string Dni {  get; private set; }
+        public static string Nombre { get; private set; }
         public static bool Admin { get; private set; }
         public static string Contrasena { get; private set; }
 
@@ -18,6 +19,11 @@ namespace Practica_final_PVA
         public static string getDni()
         {
             return Dni;
+        }
+
+        public static string getNombre()
+        {
+            return Nombre;
         }
 
         public static bool getAdmin()
@@ -30,9 +36,10 @@ namespace Practica_final_PVA
             return Contrasena;
         }
 
-        public static bool inicioSesion(string dni, string contrasena, bool admin)
+        public static bool inicioSesion(string dni, string nombre, string contrasena, bool admin)
         {
             Dni = dni;
+            Nombre = nombre;
             Contrasena = contrasena;
             Admin = admin;
 
@@ -42,6 +49,7 @@ namespace Practica_final_PVA
         public static bool cierreSesion()
         {
             Dni = null;
+            Nombre = null;
             Contrasena = null;
             Admin = false;
 

@@ -75,6 +75,12 @@
     <Compile Include="panelInicio.Designer.cs">
       <DependentUpon>panelInicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="PerfilUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerfilUsuario.Designer.cs">
+      <DependentUpon>PerfilUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProductosExistentes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="panelInicio.resx">
       <DependentUpon>panelInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerfilUsuario.resx">
+      <DependentUpon>PerfilUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductosExistentes.resx">
       <DependentUpon>ProductosExistentes.cs</DependentUpon>

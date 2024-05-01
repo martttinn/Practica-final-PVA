@@ -24,16 +24,20 @@ namespace Practica_final_PVA
         private void iniciarSesion(string Dni, string contrasena)
         {
 
-            string consulta = "";
-            int resultado = 0;
+            string consulta1 = "";
+            string consulta2 = "";
+            int resultado1 = 0;
+            string resultado2 = "";
 
             if(rbAdmin.Checked)
             {
-                consulta = "SELECT COUNT(*) FROM Usuarios WHERE Dni = @Dni AND Contrasena = @Contrasena AND Admin = 1";
+                consulta1 = "SELECT COUNT(*) FROM Usuarios WHERE Dni = @Dni AND Contrasena = @Contrasena AND Admin = 1";
+                consulta2 = "SELECT Nombre FROM Usuarios WHERE Dni = @Dni AND Contrasena = @Contrasena AND Admin = 1";
             }
             else if(rbUsuario.Checked)
             {
-                consulta = "SELECT COUNT(*) FROM Usuarios WHERE Dni = @Dni AND Contrasena = @Contrasena AND Admin = 0";
+                consulta1 = "SELECT COUNT(*) FROM Usuarios WHERE Dni = @Dni AND Contrasena = @Contrasena AND Admin = 0";
+                consulta2 = "SELECT Nombre FROM Usuarios WHERE Dni = @Dni AND Contrasena = @Contrasena AND Admin = 0";
             }
             else
             {
@@ -41,18 +45,23 @@ namespace Practica_final_PVA
                 return;
             }
 
-            SqlCommand comando = new SqlCommand(consulta,conexion);
+            SqlCommand comando1 = new SqlCommand(consulta1,conexion);
+            SqlCommand comando2 = new SqlCommand(consulta2, conexion);
 
-            comando.Parameters.AddWithValue("@Dni",Dni);
-            comando.Parameters.AddWithValue("@Contrasena", contrasena);
+            comando1.Parameters.AddWithValue("@Dni",Dni);
+            comando1.Parameters.AddWithValue("@Contrasena", contrasena);
+
+            comando2.Parameters.AddWithValue("@Dni", Dni);
+            comando2.Parameters.AddWithValue("@Contrasena", contrasena);
 
             conexion.Open();
 
-            resultado = (int)comando.ExecuteScalar();
+            resultado1 = (int)comando1.ExecuteScalar();
+            resultado2 = (string)comando2.ExecuteScalar();
 
-            if(resultado > 0 && rbAdmin.Checked)
+            if(resultado1 > 0 && rbAdmin.Checked)
             {
-               if(gestorSesion.inicioSesion(Dni, contrasena, true))
+               if(gestorSesion.inicioSesion(Dni, resultado2, contrasena, true))
                {
                     Console.WriteLine("Exito en el inicio de sesión");
                     FormularioAdmin formAdmin = new FormularioAdmin();
@@ -60,9 +69,9 @@ namespace Practica_final_PVA
                     this.Hide();
                 }
             }
-            else if(resultado > 0 && rbUsuario.Checked)
+            else if(resultado1 > 0 && rbUsuario.Checked)
             {
-                if (gestorSesion.inicioSesion(Dni, contrasena, false))
+                if (gestorSesion.inicioSesion(Dni, resultado2, contrasena, false))
                 {
                     Console.WriteLine("Exito en el inicio de sesion");
                     panelInicio formInicio = new panelInicio();
@@ -98,6 +107,7 @@ namespace Practica_final_PVA
             {
                 txtContrasena.PasswordChar = '*';
             }
+
         }
 
         private void CerrarForm(object sender, FormClosedEventArgs e)

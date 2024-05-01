@@ -39,23 +39,23 @@
             this.lbTopVentas1 = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.pbTopVentas1 = new System.Windows.Forms.PictureBox();
             this.gbTopVentas2 = new System.Windows.Forms.GroupBox();
             this.lbTopVentas2 = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.pbTopVentas2 = new System.Windows.Forms.PictureBox();
             this.gbTopVentas3 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.lbTopVentas3 = new System.Windows.Forms.ListBox();
-            this.btnCerrarSesión = new System.Windows.Forms.Button();
             this.pbTopVentas3 = new System.Windows.Forms.PictureBox();
-            this.pbTopVentas2 = new System.Windows.Forms.PictureBox();
-            this.pbTopVentas1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.lblPerfil = new System.Windows.Forms.Label();
             this.gbTopVentas1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTopVentas1)).BeginInit();
             this.gbTopVentas2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTopVentas2)).BeginInit();
             this.gbTopVentas3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTopVentas3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbTopVentas2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbTopVentas1)).BeginInit();
             this.SuspendLayout();
             // 
             // ilTopVentas1
@@ -108,7 +108,7 @@
             this.gbTopVentas1.Controls.Add(this.pbTopVentas1);
             this.gbTopVentas1.Font = new System.Drawing.Font("Audi Type", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbTopVentas1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(173)))), ((int)(((byte)(45)))));
-            this.gbTopVentas1.Location = new System.Drawing.Point(47, 61);
+            this.gbTopVentas1.Location = new System.Drawing.Point(32, 89);
             this.gbTopVentas1.Margin = new System.Windows.Forms.Padding(2);
             this.gbTopVentas1.Name = "gbTopVentas1";
             this.gbTopVentas1.Padding = new System.Windows.Forms.Padding(2);
@@ -155,6 +155,16 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Ingredientes:";
             // 
+            // pbTopVentas1
+            // 
+            this.pbTopVentas1.Location = new System.Drawing.Point(15, 41);
+            this.pbTopVentas1.Margin = new System.Windows.Forms.Padding(2);
+            this.pbTopVentas1.Name = "pbTopVentas1";
+            this.pbTopVentas1.Size = new System.Drawing.Size(144, 144);
+            this.pbTopVentas1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbTopVentas1.TabIndex = 0;
+            this.pbTopVentas1.TabStop = false;
+            // 
             // gbTopVentas2
             // 
             this.gbTopVentas2.Controls.Add(this.lbTopVentas2);
@@ -162,7 +172,7 @@
             this.gbTopVentas2.Controls.Add(this.pbTopVentas2);
             this.gbTopVentas2.Font = new System.Drawing.Font("Audi Type", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbTopVentas2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(173)))), ((int)(((byte)(45)))));
-            this.gbTopVentas2.Location = new System.Drawing.Point(282, 61);
+            this.gbTopVentas2.Location = new System.Drawing.Point(267, 89);
             this.gbTopVentas2.Margin = new System.Windows.Forms.Padding(2);
             this.gbTopVentas2.Name = "gbTopVentas2";
             this.gbTopVentas2.Padding = new System.Windows.Forms.Padding(2);
@@ -200,6 +210,17 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Ingredientes:";
             // 
+            // pbTopVentas2
+            // 
+            this.pbTopVentas2.BackColor = System.Drawing.Color.Transparent;
+            this.pbTopVentas2.Location = new System.Drawing.Point(15, 41);
+            this.pbTopVentas2.Margin = new System.Windows.Forms.Padding(2);
+            this.pbTopVentas2.Name = "pbTopVentas2";
+            this.pbTopVentas2.Size = new System.Drawing.Size(144, 144);
+            this.pbTopVentas2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbTopVentas2.TabIndex = 2;
+            this.pbTopVentas2.TabStop = false;
+            // 
             // gbTopVentas3
             // 
             this.gbTopVentas3.BackColor = System.Drawing.Color.Transparent;
@@ -208,7 +229,7 @@
             this.gbTopVentas3.Controls.Add(this.pbTopVentas3);
             this.gbTopVentas3.Font = new System.Drawing.Font("Audi Type", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbTopVentas3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(173)))), ((int)(((byte)(45)))));
-            this.gbTopVentas3.Location = new System.Drawing.Point(507, 61);
+            this.gbTopVentas3.Location = new System.Drawing.Point(492, 89);
             this.gbTopVentas3.Margin = new System.Windows.Forms.Padding(2);
             this.gbTopVentas3.Name = "gbTopVentas3";
             this.gbTopVentas3.Padding = new System.Windows.Forms.Padding(2);
@@ -246,18 +267,6 @@
             this.lbTopVentas3.Size = new System.Drawing.Size(150, 96);
             this.lbTopVentas3.TabIndex = 5;
             // 
-            // btnCerrarSesión
-            // 
-            this.btnCerrarSesión.BackgroundImage = global::Practica_final_PVA.Properties.Resources.Sandwich_3;
-            this.btnCerrarSesión.Location = new System.Drawing.Point(718, 11);
-            this.btnCerrarSesión.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnCerrarSesión.Name = "btnCerrarSesión";
-            this.btnCerrarSesión.Size = new System.Drawing.Size(114, 32);
-            this.btnCerrarSesión.TabIndex = 31;
-            this.btnCerrarSesión.Text = "Mi perfil";
-            this.btnCerrarSesión.UseVisualStyleBackColor = true;
-            this.btnCerrarSesión.Click += new System.EventHandler(this.btnCerrarSesión_Click);
-            // 
             // pbTopVentas3
             // 
             this.pbTopVentas3.BackColor = System.Drawing.Color.Transparent;
@@ -269,34 +278,13 @@
             this.pbTopVentas3.TabIndex = 3;
             this.pbTopVentas3.TabStop = false;
             // 
-            // pbTopVentas2
-            // 
-            this.pbTopVentas2.BackColor = System.Drawing.Color.Transparent;
-            this.pbTopVentas2.Location = new System.Drawing.Point(15, 41);
-            this.pbTopVentas2.Margin = new System.Windows.Forms.Padding(2);
-            this.pbTopVentas2.Name = "pbTopVentas2";
-            this.pbTopVentas2.Size = new System.Drawing.Size(144, 144);
-            this.pbTopVentas2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbTopVentas2.TabIndex = 2;
-            this.pbTopVentas2.TabStop = false;
-            // 
-            // pbTopVentas1
-            // 
-            this.pbTopVentas1.Location = new System.Drawing.Point(15, 41);
-            this.pbTopVentas1.Margin = new System.Windows.Forms.Padding(2);
-            this.pbTopVentas1.Name = "pbTopVentas1";
-            this.pbTopVentas1.Size = new System.Drawing.Size(144, 144);
-            this.pbTopVentas1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbTopVentas1.TabIndex = 0;
-            this.pbTopVentas1.TabStop = false;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label5.Font = new System.Drawing.Font("Rockwell Condensed", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(234)))));
-            this.label5.Location = new System.Drawing.Point(246, 546);
+            this.label5.Location = new System.Drawing.Point(232, 457);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(255, 31);
@@ -304,14 +292,28 @@
             this.label5.Text = "MONTA TU SANDWICH";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
+            // lblPerfil
+            // 
+            this.lblPerfil.AutoSize = true;
+            this.lblPerfil.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblPerfil.Font = new System.Drawing.Font("Rockwell Condensed", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPerfil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(173)))), ((int)(((byte)(45)))));
+            this.lblPerfil.Location = new System.Drawing.Point(562, 17);
+            this.lblPerfil.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPerfil.Name = "lblPerfil";
+            this.lblPerfil.Size = new System.Drawing.Size(135, 31);
+            this.lblPerfil.TabIndex = 33;
+            this.lblPerfil.Text = "MI PERFIL";
+            this.lblPerfil.Click += new System.EventHandler(this.lblPerfil_Click);
+            // 
             // panelInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(30)))), ((int)(((byte)(11)))));
-            this.ClientSize = new System.Drawing.Size(843, 614);
+            this.ClientSize = new System.Drawing.Size(708, 528);
+            this.Controls.Add(this.lblPerfil);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.btnCerrarSesión);
             this.Controls.Add(this.gbTopVentas3);
             this.Controls.Add(this.gbTopVentas2);
             this.Controls.Add(this.gbTopVentas1);
@@ -323,13 +325,13 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PaginaInicio_Closed);
             this.gbTopVentas1.ResumeLayout(false);
             this.gbTopVentas1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTopVentas1)).EndInit();
             this.gbTopVentas2.ResumeLayout(false);
             this.gbTopVentas2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTopVentas2)).EndInit();
             this.gbTopVentas3.ResumeLayout(false);
             this.gbTopVentas3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTopVentas3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbTopVentas2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbTopVentas1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -355,7 +357,7 @@
         private System.Windows.Forms.GroupBox gbTopVentas3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ListBox lbTopVentas3;
-        private System.Windows.Forms.Button btnCerrarSesión;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblPerfil;
     }
 }

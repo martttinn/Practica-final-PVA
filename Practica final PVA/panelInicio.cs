@@ -42,6 +42,7 @@ namespace Practica_final_PVA
             lbTopVentas1.Enabled = false;
             lbTopVentas2.Enabled = false;
             lbTopVentas3.Enabled = false;
+
         }
 
         private void PaginaInicio_Closed(object sender, FormClosedEventArgs e)
@@ -173,19 +174,16 @@ namespace Practica_final_PVA
             }
         }
 
-        private void btnCerrarSesión_Click(object sender, EventArgs e)
-        {
-            gestorSesion.cierreSesion();
-            this.Hide();
-            Form1 form = new Form1();
-            form.Show();
-        }
-
         private void label5_Click(object sender, EventArgs e)
         {
             MontaTuSandwich formMontarSandwich = new MontaTuSandwich();
             formMontarSandwich.Show();
+        }
 
+        private void lblPerfil_Click(object sender, EventArgs e)
+        {
+            PerfilUsuario formPerfil = new PerfilUsuario();
+            formPerfil.Show();
         }
     }
 }
