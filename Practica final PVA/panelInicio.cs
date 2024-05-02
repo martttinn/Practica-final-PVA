@@ -183,5 +183,12 @@ namespace Practica_final_PVA
             formPerfil.Show();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form1 form= new Form1();
+            form.Show();
+            gestorSesion.cierreSesion();
+        }
     }
 }
