@@ -50,6 +50,7 @@
             this.pbTopVentas3 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.lblPerfil = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.gbTopVentas1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTopVentas1)).BeginInit();
             this.gbTopVentas2.SuspendLayout();
@@ -306,12 +307,23 @@
             this.lblPerfil.Text = "MI PERFIL";
             this.lblPerfil.Click += new System.EventHandler(this.lblPerfil_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(375, 660);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(148, 23);
+            this.button1.TabIndex = 34;
+            this.button1.Text = "Salir";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // panelInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(30)))), ((int)(((byte)(11)))));
-            this.ClientSize = new System.Drawing.Size(885, 660);
+            this.ClientSize = new System.Drawing.Size(885, 710);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lblPerfil);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.gbTopVentas3);
@@ -358,5 +370,6 @@
         private System.Windows.Forms.ListBox lbTopVentas3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblPerfil;
+        private System.Windows.Forms.Button button1;
     }
 }
