@@ -103,6 +103,26 @@ namespace Practica_final_PVA.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _d038b030_4cad_439e_a242_2ccef4c09934 {
+            get {
+                object obj = ResourceManager.GetObject("_d038b030-4cad-439e-a242-2ccef4c09934", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _d988f85a_1827_4c1c_bdc3_d7ff2e23b025 {
+            get {
+                object obj = ResourceManager.GetObject("_d988f85a-1827-4c1c-bdc3-d7ff2e23b025", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _fe78f90a_0a69_4c96_9cb8_a70c614de56b {
             get {
                 object obj = ResourceManager.GetObject("_fe78f90a-0a69-4c96-9cb8-a70c614de56b", resourceCulture);
@@ -186,6 +206,16 @@ namespace Practica_final_PVA.Properties {
         internal static System.Drawing.Bitmap icono_persona_2 {
             get {
                 object obj = ResourceManager.GetObject("icono persona 2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icono_registrar_ventas {
+            get {
+                object obj = ResourceManager.GetObject("icono registrar ventas", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

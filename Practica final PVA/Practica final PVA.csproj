@@ -63,6 +63,12 @@
     </Compile>
     <Compile Include="gestorSesion.cs" />
     <Compile Include="Ingrediente.cs" />
+    <Compile Include="ListarVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListarVentas.Designer.cs">
+      <DependentUpon>ListarVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="MontaTuSandwich.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormularioAdmin.resx">
       <DependentUpon>FormularioAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListarVentas.resx">
+      <DependentUpon>ListarVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MontaTuSandwich.resx">
       <DependentUpon>MontaTuSandwich.cs</DependentUpon>
@@ -247,6 +256,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icono persona 2.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_d988f85a-1827-4c1c-bdc3-d7ff2e23b025.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono registrar ventas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_d038b030-4cad-439e-a242-2ccef4c09934.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

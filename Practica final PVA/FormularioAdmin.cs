@@ -102,7 +102,7 @@ namespace Practica_final_PVA
         private void ObtenerNumeroTotalVentas()
         {
             string connectionString = "server=(local)\\SQLEXPRESS;database=master; Integrated Security = SSPI";
-            string query = "SELECT COUNT(*) AS TotalVentas FROM DETALLESVENTA";
+            string query = "SELECT COUNT(*) AS TotalVentas FROM VENTAS";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -198,9 +198,10 @@ namespace Practica_final_PVA
 
         private void btnPerfil_Click(object sender, EventArgs e)
         {
+            this.Close();
             PerfilAdmin perfilAdmin = new PerfilAdmin();
             perfilAdmin.Show();
-            this.Hide();
+
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -208,6 +209,13 @@ namespace Practica_final_PVA
             this.Close();
             Form1 form1 = new Form1();
             form1.Show();
+        }
+
+        private void btnListarVentas_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            ListarVentas listarVentas = new ListarVentas();
+            listarVentas.Show();
         }
     }
 
