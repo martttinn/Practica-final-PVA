@@ -99,20 +99,28 @@ namespace Practica_final_PVA
 
         private void cbMostrar_CheckedChanged(object sender, EventArgs e)
         {
-            if (txtContrasena.PasswordChar == '*')
+            if (cbMostrar.Checked)
             {
-                txtContrasena.PasswordChar = '\0';
+                txtContrasena.UseSystemPasswordChar = false;
             }
             else
             {
-                txtContrasena.PasswordChar = '*';
+                txtContrasena.UseSystemPasswordChar = true;
             }
-
         }
+
+        
+
 
         private void CerrarForm(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            Registrar formRegistro = new Registrar();
+            formRegistro.Show();
         }
     }
 }

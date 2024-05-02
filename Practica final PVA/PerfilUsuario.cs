@@ -15,9 +15,16 @@ namespace Practica_final_PVA
     {
         private string dni, nombre, contrasena;
         private bool admin;
+
+
         public PerfilUsuario()
         {
+            this.StartPosition = FormStartPosition.CenterScreen;
             InitializeComponent();
+            cargarInfo();
+        }
+        private void cbMostrar_CheckedChanged(object sender, EventArgs e)
+        {
             cargarInfo();
         }
 
@@ -30,6 +37,29 @@ namespace Practica_final_PVA
 
             string bienvenida = "Bienvenido, " + this.nombre;
             lblBienvenida.Text = bienvenida.ToUpper();
+
+            lblNom.Text = this.nombre;
+            lblDni.Text = this.dni;
+
+            string contrasenaOculta = new string('*', this.contrasena.Length);
+
+            if (cbMostrar.Checked )
+            {
+                lblContrasena.Text = this.contrasena;
+            }
+            else
+            {
+                lblContrasena.Text = contrasenaOculta;
+            }
+
+            if(admin)
+            {
+                lblAdmin.Text = "Si";
+            }
+            else
+            {
+                lblAdmin.Text = "No";
+            }
         }
     }
 }
