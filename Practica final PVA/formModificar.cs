@@ -64,7 +64,7 @@ namespace Practica_final_PVA
 
             if(filasAfectadas > 0)
             {
-                MessageBox.Show("Informacion modificada con exito.", "Exito", MessageBoxButtons.OK);
+                MessageBox.Show("Informacion modificada con exito.\n La informacion se actualizara en el perfil la proxima vez que inicies sesión", "Exito", MessageBoxButtons.OK);
             }
             else
             {
