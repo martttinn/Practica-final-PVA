@@ -40,12 +40,18 @@ namespace Practica_final_PVA
             formInicial.Show();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            formModificar formModificar = new formModificar(this);
+            formModificar.Show();
+        }
+
         private void cbMostrar_CheckedChanged(object sender, EventArgs e)
         {
             cargarInfo();
         }
 
-        private void cargarInfo()
+        public void cargarInfo()
         {
             this.dni = gestorSesion.getDni();
             this.nombre = gestorSesion.getNombre();

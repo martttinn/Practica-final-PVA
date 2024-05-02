@@ -55,6 +55,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="formModificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formModificar.Designer.cs">
+      <DependentUpon>formModificar.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormularioAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     <Compile Include="Sandwich.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formModificar.resx">
+      <DependentUpon>formModificar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormularioAdmin.resx">
       <DependentUpon>FormularioAdmin.cs</DependentUpon>
