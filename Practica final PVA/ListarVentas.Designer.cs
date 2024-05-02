@@ -30,6 +30,11 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.cHPedido = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cHArticulo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cHFecha = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cHPrecio = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cHUsuario = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnCerrar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.lblTotalPedidos = new System.Windows.Forms.Label();
@@ -49,16 +54,52 @@
             // 
             // listView1
             // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.cHPedido,
+            this.cHArticulo,
+            this.cHFecha,
+            this.cHPrecio,
+            this.cHUsuario});
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(12, 48);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(564, 314);
+            this.listView1.Size = new System.Drawing.Size(651, 324);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // cHPedido
+            // 
+            this.cHPedido.Text = "Pedido";
+            this.cHPedido.Width = 70;
+            // 
+            // cHArticulo
+            // 
+            this.cHArticulo.Text = "Artículo";
+            this.cHArticulo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.cHArticulo.Width = 180;
+            // 
+            // cHFecha
+            // 
+            this.cHFecha.Text = "Fecha venta";
+            this.cHFecha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.cHFecha.Width = 150;
+            // 
+            // cHPrecio
+            // 
+            this.cHPrecio.Text = "Precio";
+            this.cHPrecio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.cHPrecio.Width = 90;
+            // 
+            // cHUsuario
+            // 
+            this.cHUsuario.Text = "Usuario";
+            this.cHUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.cHUsuario.Width = 160;
             // 
             // btnCerrar
             // 
-            this.btnCerrar.Location = new System.Drawing.Point(622, 374);
+            this.btnCerrar.Location = new System.Drawing.Point(705, 381);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(110, 32);
             this.btnCerrar.TabIndex = 2;
@@ -70,7 +111,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(618, 112);
+            this.label2.Location = new System.Drawing.Point(705, 117);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 25);
             this.label2.TabIndex = 4;
@@ -80,7 +121,7 @@
             // 
             this.lblTotalPedidos.AutoSize = true;
             this.lblTotalPedidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalPedidos.Location = new System.Drawing.Point(623, 48);
+            this.lblTotalPedidos.Location = new System.Drawing.Point(715, 65);
             this.lblTotalPedidos.Name = "lblTotalPedidos";
             this.lblTotalPedidos.Size = new System.Drawing.Size(47, 52);
             this.lblTotalPedidos.TabIndex = 5;
@@ -89,7 +130,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Practica_final_PVA.Properties.Resources.icono_imagen;
-            this.pictureBox1.Location = new System.Drawing.Point(607, 158);
+            this.pictureBox1.Location = new System.Drawing.Point(693, 158);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(111, 109);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -100,7 +141,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(744, 418);
+            this.ClientSize = new System.Drawing.Size(827, 425);
             this.Controls.Add(this.lblTotalPedidos);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
@@ -123,5 +164,10 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblTotalPedidos;
+        private System.Windows.Forms.ColumnHeader cHPedido;
+        private System.Windows.Forms.ColumnHeader cHArticulo;
+        private System.Windows.Forms.ColumnHeader cHFecha;
+        private System.Windows.Forms.ColumnHeader cHPrecio;
+        private System.Windows.Forms.ColumnHeader cHUsuario;
     }
 }
