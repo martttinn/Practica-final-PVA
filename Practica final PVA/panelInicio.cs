@@ -45,10 +45,7 @@ namespace Practica_final_PVA
 
         }
 
-        private void PaginaInicio_Closed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
+
 
         private void cambiar_imagenes(object sender, EventArgs e)
         {
@@ -182,8 +179,9 @@ namespace Practica_final_PVA
 
         private void lblPerfil_Click(object sender, EventArgs e)
         {
-            PerfilUsuario formPerfil = new PerfilUsuario();
+            PerfilUsuario formPerfil = new PerfilUsuario(this);
             formPerfil.Show();
         }
+
     }
 }
