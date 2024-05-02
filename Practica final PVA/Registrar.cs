@@ -69,6 +69,8 @@ namespace Practica_final_PVA
                 {
                     MessageBox.Show("No se pudo registrar al usuario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+
+                conexion.Close();
             }
             else
             {

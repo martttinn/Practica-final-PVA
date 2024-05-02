@@ -9,6 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Net;
+using System.Xml.XPath;
+using System.Security.AccessControl;
 
 namespace Practica_final_PVA
 {
@@ -227,9 +230,107 @@ namespace Practica_final_PVA
             MessageBox.Show("Factura exportada con exito a Excel", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        private async void registrarVenta()
+        {
+            string dniCliente = gestorSesion.getDni();
+
+            DateTime fecha = DateTime.Now.Date;
+
+            float precioTotal = this.sandwich.calcularPrecio();
+            precioTotal = (float)Math.Round(precioTotal, 2);
+
+            string insert = "INSERT INTO VENTAS(Dni, FechaVenta, PrecioTotal) VALUES(@Dni, @FechaVenta, @PrecioTotal)";
+            int filasAfectadas = 0;
+
+            int idVenta = 0;
+
+            SqlCommand comando = new SqlCommand(insert,conexion);
+            comando.Parameters.AddWithValue("@Dni", dniCliente);
+            comando.Parameters.AddWithValue("@FechaVenta", fecha);
+            comando.Parameters.AddWithValue("@PrecioTotal", precioTotal);
+
+            string selectId = "SELECT Id FROM VENTAS WHERE Dni = @Dni2 AND FechaVenta = @FechaVenta2 AND PrecioTotal = @PrecioTotal2";
+            
+            SqlCommand comando2 = new SqlCommand(selectId, conexion);
+            comando2.Parameters.AddWithValue("@Dni2", dniCliente);
+            comando2.Parameters.AddWithValue("@FechaVenta2", fecha);
+            comando2.Parameters.AddWithValue("@PrecioTotal2", precioTotal);
+
+            try
+            {
+                conexion.Open();
+
+                filasAfectadas = comando.ExecuteNonQuery();
+
+                idVenta = (int)comando2.ExecuteScalar();
+
+                foreach (Ingrediente ingrediente in sandwich.ingredientes)
+                {   
+                    string nombreIngrediente = ingrediente.getNombre();
+                    int unidadesIngrediente = ingrediente.getUnidades();
+                    int idIngrediente = ObtenerIdIngrediente(nombreIngrediente);
+
+                    if (idIngrediente != -1)
+                    {
+                        string insertDetalle = "INSERT INTO DETALLESVENTA(IDVenta, NomProducto, IDIngrediente, Cantidad) VALUES(@IDVenta, @NomProducto, @IDIngrediente, @Cantidad)";
+                        SqlCommand comandoDetalle = new SqlCommand(insertDetalle, conexion);
+                        comandoDetalle.Parameters.AddWithValue("@IDVenta", idVenta);
+                        comandoDetalle.Parameters.AddWithValue("@NomProducto", "Sandwich personalizado");
+                        comandoDetalle.Parameters.AddWithValue("@IDIngrediente", idIngrediente);
+                        comandoDetalle.Parameters.AddWithValue("@Cantidad", unidadesIngrediente);
+                        comandoDetalle.ExecuteNonQuery();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Hubo un error con los ingredientes.", "Error");
+                        return;
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("se produjo un error:" + ex.Message, "Error");
+            }
+
+            if(filasAfectadas > 0)
+            {
+                DialogResult resultado = MessageBox.Show("Pedido registrado con exito.\n¿Desea exportar la factura a excel?", "Exito", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if(resultado == DialogResult.Yes)
+                {
+                    ExportarFactura();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Error al realizar el pedido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+            conexion.Close();
+        }
+
+        private int ObtenerIdIngrediente(string nombreIngrediente)
+        {
+            string consulta = "SELECT Id FROM INGREDIENTES WHERE Nombre = @Nombre";
+            SqlCommand comando = new SqlCommand(consulta, conexion);
+            comando.Parameters.AddWithValue("@Nombre", nombreIngrediente);
+            int idIngrediente = -1;
+
+            try
+            {
+                idIngrediente = (int)comando.ExecuteScalar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al obtener el ID del ingrediente: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return idIngrediente;
+        }
+
         private void btnPagar_Click(object sender, EventArgs e)
         {
-            ExportarFactura();
+            registrarVenta();
         }
 
 

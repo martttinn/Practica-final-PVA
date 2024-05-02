@@ -61,10 +61,10 @@
             // btnPagar
             // 
             this.btnPagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPagar.Location = new System.Drawing.Point(495, 369);
-            this.btnPagar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPagar.Location = new System.Drawing.Point(660, 454);
+            this.btnPagar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPagar.Name = "btnPagar";
-            this.btnPagar.Size = new System.Drawing.Size(143, 24);
+            this.btnPagar.Size = new System.Drawing.Size(191, 30);
             this.btnPagar.TabIndex = 50;
             this.btnPagar.Text = "Pagar";
             this.btnPagar.UseVisualStyleBackColor = true;
@@ -73,10 +73,10 @@
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(27, 366);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEliminar.Location = new System.Drawing.Point(36, 450);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(143, 24);
+            this.btnEliminar.Size = new System.Drawing.Size(191, 30);
             this.btnEliminar.TabIndex = 49;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -87,10 +87,9 @@
             this.lblPrecioTotal.AutoSize = true;
             this.lblPrecioTotal.Font = new System.Drawing.Font("Audi Type", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrecioTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(173)))), ((int)(((byte)(45)))));
-            this.lblPrecioTotal.Location = new System.Drawing.Point(390, 370);
-            this.lblPrecioTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPrecioTotal.Location = new System.Drawing.Point(520, 455);
             this.lblPrecioTotal.Name = "lblPrecioTotal";
-            this.lblPrecioTotal.Size = new System.Drawing.Size(20, 20);
+            this.lblPrecioTotal.Size = new System.Drawing.Size(25, 25);
             this.lblPrecioTotal.TabIndex = 48;
             this.lblPrecioTotal.Text = "0";
             // 
@@ -99,10 +98,9 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Audi Type", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(173)))), ((int)(((byte)(45)))));
-            this.label11.Location = new System.Drawing.Point(251, 370);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Location = new System.Drawing.Point(335, 455);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(143, 20);
+            this.label11.Size = new System.Drawing.Size(177, 25);
             this.label11.TabIndex = 47;
             this.label11.Text = "PRECIO TOTAL: €";
             // 
@@ -114,10 +112,10 @@
             this.Precio_Unidad});
             this.lvSandwich.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lvSandwich.HideSelection = false;
-            this.lvSandwich.Location = new System.Drawing.Point(255, 76);
-            this.lvSandwich.Margin = new System.Windows.Forms.Padding(2);
+            this.lvSandwich.Location = new System.Drawing.Point(340, 94);
+            this.lvSandwich.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lvSandwich.Name = "lvSandwich";
-            this.lvSandwich.Size = new System.Drawing.Size(383, 279);
+            this.lvSandwich.Size = new System.Drawing.Size(509, 342);
             this.lvSandwich.TabIndex = 46;
             this.lvSandwich.UseCompatibleStateImageBehavior = false;
             this.lvSandwich.View = System.Windows.Forms.View.Details;
@@ -140,10 +138,10 @@
             // btnAnadir
             // 
             this.btnAnadir.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAnadir.Location = new System.Drawing.Point(27, 330);
-            this.btnAnadir.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAnadir.Location = new System.Drawing.Point(36, 406);
+            this.btnAnadir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAnadir.Name = "btnAnadir";
-            this.btnAnadir.Size = new System.Drawing.Size(143, 24);
+            this.btnAnadir.Size = new System.Drawing.Size(191, 30);
             this.btnAnadir.TabIndex = 45;
             this.btnAnadir.Text = "Añadir";
             this.btnAnadir.UseVisualStyleBackColor = true;
@@ -151,34 +149,54 @@
             // 
             // udSalsa
             // 
-            this.udSalsa.Location = new System.Drawing.Point(139, 293);
-            this.udSalsa.Margin = new System.Windows.Forms.Padding(2);
+            this.udSalsa.Location = new System.Drawing.Point(185, 361);
+            this.udSalsa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.udSalsa.Maximum = new decimal(new int[] {
+            9,
+            0,
+            0,
+            0});
             this.udSalsa.Name = "udSalsa";
-            this.udSalsa.Size = new System.Drawing.Size(31, 20);
+            this.udSalsa.Size = new System.Drawing.Size(41, 22);
             this.udSalsa.TabIndex = 44;
             // 
             // udQueso
             // 
-            this.udQueso.Location = new System.Drawing.Point(139, 237);
-            this.udQueso.Margin = new System.Windows.Forms.Padding(2);
+            this.udQueso.Location = new System.Drawing.Point(185, 292);
+            this.udQueso.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.udQueso.Maximum = new decimal(new int[] {
+            9,
+            0,
+            0,
+            0});
             this.udQueso.Name = "udQueso";
-            this.udQueso.Size = new System.Drawing.Size(31, 20);
+            this.udQueso.Size = new System.Drawing.Size(41, 22);
             this.udQueso.TabIndex = 43;
             // 
             // udVerdura
             // 
-            this.udVerdura.Location = new System.Drawing.Point(139, 182);
-            this.udVerdura.Margin = new System.Windows.Forms.Padding(2);
+            this.udVerdura.Location = new System.Drawing.Point(185, 224);
+            this.udVerdura.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.udVerdura.Maximum = new decimal(new int[] {
+            9,
+            0,
+            0,
+            0});
             this.udVerdura.Name = "udVerdura";
-            this.udVerdura.Size = new System.Drawing.Size(31, 20);
+            this.udVerdura.Size = new System.Drawing.Size(41, 22);
             this.udVerdura.TabIndex = 42;
             // 
             // udProteina
             // 
-            this.udProteina.Location = new System.Drawing.Point(139, 129);
-            this.udProteina.Margin = new System.Windows.Forms.Padding(2);
+            this.udProteina.Location = new System.Drawing.Point(185, 159);
+            this.udProteina.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.udProteina.Maximum = new decimal(new int[] {
+            9,
+            0,
+            0,
+            0});
             this.udProteina.Name = "udProteina";
-            this.udProteina.Size = new System.Drawing.Size(31, 20);
+            this.udProteina.Size = new System.Drawing.Size(41, 22);
             this.udProteina.TabIndex = 41;
             // 
             // label10
@@ -186,10 +204,9 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Audi Type", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(96)))), ((int)(((byte)(19)))));
-            this.label10.Location = new System.Drawing.Point(24, 272);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(32, 335);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(45, 17);
+            this.label10.Size = new System.Drawing.Size(53, 21);
             this.label10.TabIndex = 40;
             this.label10.Text = "Salsa";
             // 
@@ -198,10 +215,9 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Audi Type", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(96)))), ((int)(((byte)(19)))));
-            this.label9.Location = new System.Drawing.Point(24, 218);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(32, 268);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(50, 17);
+            this.label9.Size = new System.Drawing.Size(61, 21);
             this.label9.TabIndex = 39;
             this.label9.Text = "Queso";
             // 
@@ -210,10 +226,9 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Audi Type", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(96)))), ((int)(((byte)(19)))));
-            this.label8.Location = new System.Drawing.Point(24, 163);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(32, 201);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(63, 17);
+            this.label8.Size = new System.Drawing.Size(75, 21);
             this.label8.TabIndex = 38;
             this.label8.Text = "Verdura";
             // 
@@ -222,38 +237,37 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Audi Type", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(96)))), ((int)(((byte)(19)))));
-            this.label7.Location = new System.Drawing.Point(24, 109);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(32, 134);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(66, 17);
+            this.label7.Size = new System.Drawing.Size(79, 21);
             this.label7.TabIndex = 37;
             this.label7.Text = "Proteina";
             // 
             // cbSalsa
             // 
             this.cbSalsa.FormattingEnabled = true;
-            this.cbSalsa.Location = new System.Drawing.Point(27, 291);
-            this.cbSalsa.Margin = new System.Windows.Forms.Padding(2);
+            this.cbSalsa.Location = new System.Drawing.Point(36, 358);
+            this.cbSalsa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbSalsa.Name = "cbSalsa";
-            this.cbSalsa.Size = new System.Drawing.Size(98, 21);
+            this.cbSalsa.Size = new System.Drawing.Size(129, 24);
             this.cbSalsa.TabIndex = 36;
             // 
             // cbqueso
             // 
             this.cbqueso.FormattingEnabled = true;
-            this.cbqueso.Location = new System.Drawing.Point(26, 237);
-            this.cbqueso.Margin = new System.Windows.Forms.Padding(2);
+            this.cbqueso.Location = new System.Drawing.Point(35, 292);
+            this.cbqueso.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbqueso.Name = "cbqueso";
-            this.cbqueso.Size = new System.Drawing.Size(98, 21);
+            this.cbqueso.Size = new System.Drawing.Size(129, 24);
             this.cbqueso.TabIndex = 35;
             // 
             // cbVerdura
             // 
             this.cbVerdura.FormattingEnabled = true;
-            this.cbVerdura.Location = new System.Drawing.Point(26, 182);
-            this.cbVerdura.Margin = new System.Windows.Forms.Padding(2);
+            this.cbVerdura.Location = new System.Drawing.Point(35, 224);
+            this.cbVerdura.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbVerdura.Name = "cbVerdura";
-            this.cbVerdura.Size = new System.Drawing.Size(98, 21);
+            this.cbVerdura.Size = new System.Drawing.Size(129, 24);
             this.cbVerdura.TabIndex = 34;
             // 
             // label6
@@ -261,20 +275,19 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Audi Type", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(173)))), ((int)(((byte)(45)))));
-            this.label6.Location = new System.Drawing.Point(23, 76);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(31, 94);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(115, 20);
+            this.label6.Size = new System.Drawing.Size(144, 25);
             this.label6.TabIndex = 31;
             this.label6.Text = "Ingredientes:";
             // 
             // cbProteina
             // 
             this.cbProteina.FormattingEnabled = true;
-            this.cbProteina.Location = new System.Drawing.Point(26, 128);
-            this.cbProteina.Margin = new System.Windows.Forms.Padding(2);
+            this.cbProteina.Location = new System.Drawing.Point(35, 158);
+            this.cbProteina.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbProteina.Name = "cbProteina";
-            this.cbProteina.Size = new System.Drawing.Size(98, 21);
+            this.cbProteina.Size = new System.Drawing.Size(129, 24);
             this.cbProteina.TabIndex = 33;
             // 
             // label5
@@ -282,19 +295,18 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Rockwell Condensed", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(234)))));
-            this.label5.Location = new System.Drawing.Point(18, 15);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(24, 18);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(255, 31);
+            this.label5.Size = new System.Drawing.Size(321, 40);
             this.label5.TabIndex = 32;
             this.label5.Text = "MONTA TU SANDWICH";
             // 
             // MontaTuSandwich
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(30)))), ((int)(((byte)(11)))));
-            this.ClientSize = new System.Drawing.Size(665, 438);
+            this.ClientSize = new System.Drawing.Size(887, 539);
             this.Controls.Add(this.btnPagar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.lblPrecioTotal);
@@ -316,6 +328,7 @@
             this.Controls.Add(this.cbProteina);
             this.Controls.Add(this.label5);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MontaTuSandwich";
             this.Text = "Sandwich Sprint - Monta tu sandwich";
             ((System.ComponentModel.ISupportInitialize)(this.udSalsa)).EndInit();

@@ -12,7 +12,7 @@ namespace Practica_final_PVA
     {
         private string nombre { get; set; }
         private float precio { get; set; }
-        private List<Ingrediente> ingredientes;
+        public List<Ingrediente> ingredientes;
 
         public Sandwich()
         {

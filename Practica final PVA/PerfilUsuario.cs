@@ -35,7 +35,7 @@ namespace Practica_final_PVA
             this.contrasena = gestorSesion.getContrasena();
             this.admin = gestorSesion.getAdmin();
 
-            string bienvenida = "Bienvenido, " + this.nombre;
+            string bienvenida = "Bienvenido/a, " + this.nombre;
             lblBienvenida.Text = bienvenida.ToUpper();
 
             lblNom.Text = this.nombre;
