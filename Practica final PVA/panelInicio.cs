@@ -18,6 +18,9 @@ namespace Practica_final_PVA
         // Conexion con la base de datos
         private SqlConnection conexion = new SqlConnection("server=(local)\\SQLEXPRESS;database=master; Integrated Security=SSPI");
 
+        // Form principal
+        Form1 formPrincipal;
+
         //Indices de imagen del imagelist de top ventas
         private int indiceIL1 = 0; 
         private int indiceIL2 = 0;
@@ -28,10 +31,12 @@ namespace Practica_final_PVA
 
         // Objeto sandwich para poder montarlo a gusto
         Sandwich sandwich = new Sandwich();
-        public panelInicio()
+        public panelInicio(Form1 formInicial)
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
+
+            this.formPrincipal = formInicial;
 
             pbTopVentas1.Image = ilTopVentas1.Images[indiceIL1];
             pbTopVentas2.Image = ilTopVentas2.Images[indiceIL2];
@@ -201,9 +206,8 @@ namespace Practica_final_PVA
                     formulario.Close();
                 }
             }
-                
-            Form1 form = new Form1();
-            form.Show();
+
+            this.formPrincipal.mostrarForm();
         }
     }
 }

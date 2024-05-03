@@ -64,6 +64,12 @@ namespace Practica_final_PVA
                if(gestorSesion.inicioSesion(Dni, resultado2, contrasena, true))
                {
                     Console.WriteLine("Exito en el inicio de sesión");
+
+                    txtDni.Text = "";
+                    txtContrasena.Text = "";
+                    rbAdmin.Checked = false;
+                    rbUsuario.Checked = false;
+
                     FormularioAdmin formAdmin = new FormularioAdmin();
                     formAdmin.Show();
                     this.Hide();
@@ -74,7 +80,13 @@ namespace Practica_final_PVA
                 if (gestorSesion.inicioSesion(Dni, resultado2, contrasena, false))
                 {
                     Console.WriteLine("Exito en el inicio de sesion");
-                    panelInicio formInicio = new panelInicio();
+
+                    txtDni.Text = "";
+                    txtContrasena.Text = "";
+                    rbAdmin.Checked = false;
+                    rbUsuario.Checked = false;
+
+                    panelInicio formInicio = new panelInicio(this);
                     formInicio.Show();
                     this.Hide();
                 }
@@ -109,8 +121,15 @@ namespace Practica_final_PVA
             }
         }
 
-        
+        public void mostrarForm()
+        {
+            this.Show();
+        }
 
+        public void ocultarForm()
+        {
+            this.Hide();
+        }
 
         private void CerrarForm(object sender, FormClosedEventArgs e)
         {
