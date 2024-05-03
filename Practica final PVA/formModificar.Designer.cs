@@ -39,6 +39,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtContra2 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.cbMostrar = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label3
@@ -105,6 +106,7 @@
             this.txtContra.Name = "txtContra";
             this.txtContra.Size = new System.Drawing.Size(169, 22);
             this.txtContra.TabIndex = 13;
+            this.txtContra.UseSystemPasswordChar = true;
             // 
             // label4
             // 
@@ -123,10 +125,11 @@
             this.txtContra2.Name = "txtContra2";
             this.txtContra2.Size = new System.Drawing.Size(169, 22);
             this.txtContra2.TabIndex = 15;
+            this.txtContra2.UseSystemPasswordChar = true;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(188, 389);
+            this.button1.Location = new System.Drawing.Point(181, 431);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(118, 23);
             this.button1.TabIndex = 16;
@@ -134,12 +137,27 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // cbMostrar
+            // 
+            this.cbMostrar.AutoSize = true;
+            this.cbMostrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbMostrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(96)))), ((int)(((byte)(19)))));
+            this.cbMostrar.Location = new System.Drawing.Point(160, 366);
+            this.cbMostrar.Margin = new System.Windows.Forms.Padding(2);
+            this.cbMostrar.Name = "cbMostrar";
+            this.cbMostrar.Size = new System.Drawing.Size(170, 20);
+            this.cbMostrar.TabIndex = 17;
+            this.cbMostrar.Text = "Mostrar contraseñas";
+            this.cbMostrar.UseVisualStyleBackColor = true;
+            this.cbMostrar.CheckedChanged += new System.EventHandler(this.cbMostrar_CheckedChanged);
+            // 
             // formModificar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(30)))), ((int)(((byte)(11)))));
-            this.ClientSize = new System.Drawing.Size(466, 450);
+            this.ClientSize = new System.Drawing.Size(466, 483);
+            this.Controls.Add(this.cbMostrar);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtContra2);
             this.Controls.Add(this.label4);
@@ -170,5 +188,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtContra2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckBox cbMostrar;
     }
 }

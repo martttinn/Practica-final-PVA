@@ -91,5 +91,19 @@ namespace Practica_final_PVA
         {
             modificarDatos();
         }
+
+        private void cbMostrar_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbMostrar.Checked)
+            {
+                txtContra.UseSystemPasswordChar = false;
+                txtContra2.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtContra.UseSystemPasswordChar = true;
+                txtContra2.UseSystemPasswordChar = true;
+            }
+        }
     }
 }
