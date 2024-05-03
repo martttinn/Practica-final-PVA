@@ -185,10 +185,25 @@ namespace Practica_final_PVA
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Form1 form= new Form1();
-            form.Show();
             gestorSesion.cierreSesion();
+
+            List<Form> formulariosAbiertos = new List<Form>();
+
+            foreach (Form formulario in Application.OpenForms)
+            {
+                formulariosAbiertos.Add(formulario);
+            }
+
+            foreach (Form formulario in formulariosAbiertos)
+            {
+                if(formulario.Name != "Form1")
+                {
+                    formulario.Close();
+                }
+            }
+                
+            Form1 form = new Form1();
+            form.Show();
         }
     }
 }

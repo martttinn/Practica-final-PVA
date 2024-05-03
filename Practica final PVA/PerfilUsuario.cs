@@ -29,17 +29,6 @@ namespace Practica_final_PVA
             cargarInfo();
         }
 
-        private void btnCerrarSesion_Click(object sender, EventArgs e)
-        {
-            gestorSesion.cierreSesion();
-
-            this.Close();
-            this.panelInicial.Close();
-
-            Form1 formInicial = new Form1();
-            formInicial.Show();
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             formModificar formModificar = new formModificar(this);

@@ -129,9 +129,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(181, 431);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(181, 432);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 23);
+            this.button1.Size = new System.Drawing.Size(118, 28);
             this.button1.TabIndex = 16;
             this.button1.Text = "Confirmar";
             this.button1.UseVisualStyleBackColor = true;
