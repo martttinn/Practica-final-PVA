@@ -209,5 +209,11 @@ namespace Practica_final_PVA
 
             this.formPrincipal.mostrarForm();
         }
+
+        private void lblEligeSandwich_Click(object sender, EventArgs e)
+        {
+            EligeSandwich formElige = new EligeSandwich();
+            formElige.Show();
+        }
     }
 }

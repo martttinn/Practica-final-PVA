@@ -111,6 +111,7 @@
             this.Cantidad,
             this.Precio_Unidad});
             this.lvSandwich.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvSandwich.FullRowSelect = true;
             this.lvSandwich.HideSelection = false;
             this.lvSandwich.Location = new System.Drawing.Point(340, 94);
             this.lvSandwich.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -328,7 +329,7 @@
             this.Controls.Add(this.cbProteina);
             this.Controls.Add(this.label5);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MontaTuSandwich";
             this.Text = "Sandwich Sprint - Monta tu sandwich";
             ((System.ComponentModel.ISupportInitialize)(this.udSalsa)).EndInit();

@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EligeSandwich.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EligeSandwich.Designer.cs">
+      <DependentUpon>EligeSandwich.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,10 @@
       <DependentUpon>Registrar.cs</DependentUpon>
     </Compile>
     <Compile Include="Sandwich.cs" />
+    <Compile Include="SandwichPredefinido.cs" />
+    <EmbeddedResource Include="EligeSandwich.resx">
+      <DependentUpon>EligeSandwich.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
