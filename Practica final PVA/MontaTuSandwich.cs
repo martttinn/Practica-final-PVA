@@ -222,7 +222,7 @@ namespace Practica_final_PVA
             string NomArchivo = "Factura.xlsx";
             workbook.SaveAs(NomArchivo);
 
-            // Cerrar y liberar recursos
+            
             workbook.Close();
             excelApp.Quit();
             System.Runtime.InteropServices.Marshal.ReleaseComObject(excelApp);
@@ -230,7 +230,7 @@ namespace Practica_final_PVA
             MessageBox.Show("Factura exportada con exito a Excel", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private async void registrarVenta()
+        private void registrarVenta()
         {
             string dniCliente = gestorSesion.getDni();
 

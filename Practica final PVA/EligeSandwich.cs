@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Microsoft.Office.Core;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using Excel = Microsoft.Office.Interop.Excel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -52,6 +54,7 @@ namespace Practica_final_PVA
             }
 
             lector.Close();
+            conexion.Close();
 
             foreach(SandwichPredefinido sandwich in sandwiches)
             {
@@ -107,6 +110,18 @@ namespace Practica_final_PVA
             lblPrecioTotal.Text = this.precioTotal.ToString();
         }
 
+        private decimal calcPrecioTotalReturn()
+        {
+            this.precioTotal = 0;
+
+            foreach (SandwichPredefinido sandwich in Cesta)
+            {
+                this.precioTotal += sandwich.calcPrecio();
+            }
+
+            return this.precioTotal;
+        }
+
         private void eliminarSandwich()
         {
             SandwichPredefinido sandwichAEliminar = null;
@@ -142,6 +157,160 @@ namespace Practica_final_PVA
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             eliminarSandwich();
+        }
+
+        private void registrarVenta()
+        {
+            string dniCliente = gestorSesion.getDni();
+
+            DateTime fecha = DateTime.Now.Date;
+
+            decimal precioTotal = calcPrecioTotalReturn();
+
+            string insert = "INSERT INTO VENTAS(Dni, FechaVenta, PrecioTotal) VALUES(@Dni, @FechaVenta, @PrecioTotal)";
+            int filasAfectadas = 0;
+
+            int idVenta = 0;
+
+            SqlCommand comando1 = new SqlCommand(insert, conexion);
+            comando1.Parameters.AddWithValue("@Dni",dniCliente);
+            comando1.Parameters.AddWithValue("@FechaVenta", fecha);
+            comando1.Parameters.AddWithValue("@PrecioTotal", precioTotal);
+
+            string selectId = "SELECT Id FROM VENTAS WHERE Dni = @Dni2 AND FechaVenta = @FechaVenta2 AND PrecioTotal = @PrecioTotal2";
+
+            SqlCommand comando2 = new SqlCommand(selectId, conexion);
+            comando2.Parameters.AddWithValue("@Dni2", dniCliente);
+            comando2.Parameters.AddWithValue("@FechaVenta2", fecha);
+            comando2.Parameters.AddWithValue("@PrecioTotal2", precioTotal);
+
+            try
+            {
+                conexion.Open();
+
+                filasAfectadas = comando1.ExecuteNonQuery();
+
+                if(filasAfectadas == 0)
+                {
+                    MessageBox.Show("Hubo un error al registrar la venta.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                idVenta = (int)comando2.ExecuteScalar();
+
+                if(Cesta.Count > 1)
+                {
+                    filasAfectadas = 0;
+
+                    foreach (SandwichPredefinido sandwich in Cesta)
+                    {
+                        string nombreSandwich = sandwich.getNombre();
+                        int unidades = sandwich.getUnidades();
+
+                        string insertDetalle = "INSERT INTO DETALLESVENTA(IDVenta, NomProducto, Cantidad) VALUES(@IDVenta, @NomProducto, @Cantidad)";
+                        SqlCommand comandoDetalle = new SqlCommand(insertDetalle, conexion);
+                        comandoDetalle.Parameters.AddWithValue("@IDVenta", idVenta);
+                        comandoDetalle.Parameters.AddWithValue("@NomProducto", nombreSandwich);
+                        comandoDetalle.Parameters.AddWithValue("@Cantidad", unidades);
+
+                        filasAfectadas = comandoDetalle.ExecuteNonQuery();
+                    }
+
+                    if (filasAfectadas != 0)
+                    {
+                        DialogResult resultado = MessageBox.Show("Pedido registrado con exito.\n¿Desea exportar la factura a excel?", "Exito", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (resultado == DialogResult.Yes)
+                        {
+                            ExportarFactura();
+                        }
+                    }
+
+                }
+                else if(Cesta.Count == 1)
+                {
+                    filasAfectadas = 0;
+
+                    SandwichPredefinido sandwich = Cesta[0];
+
+                    string nombreSandwich = sandwich.getNombre();
+                    int unidades = sandwich.getUnidades();
+
+                    string insertDetalle = "INSERT INTO DETALLESVENTA(IDVenta, NomProducto, Cantidad) VALUES(@IDVenta, @NomProducto, @Cantidad)";
+                    SqlCommand comandoDetalle = new SqlCommand(insertDetalle, conexion);
+                    comandoDetalle.Parameters.AddWithValue("@IDVenta", idVenta);
+                    comandoDetalle.Parameters.AddWithValue("@NomProducto", nombreSandwich);
+                    comandoDetalle.Parameters.AddWithValue("@Cantidad", unidades);
+
+                    filasAfectadas = comandoDetalle.ExecuteNonQuery();
+
+                    if (filasAfectadas != 0)
+                    {
+                        DialogResult resultado = MessageBox.Show("Pedido registrado con exito.\n¿Desea exportar la factura a excel?", "Exito", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (resultado == DialogResult.Yes)
+                        {
+                            ExportarFactura();
+                        }
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Hubo un error contando los elementos del pedido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                conexion.Close();
+
+
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hubo un error:" + ex.ToString());
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            registrarVenta();
+            
+        }
+
+        private void ExportarFactura()
+        {
+
+            Excel.Application excelApp = new Excel.Application();
+            Excel.Workbook workbook = excelApp.Workbooks.Add();
+            Excel.Worksheet worksheet = workbook.ActiveSheet;
+
+
+            worksheet.Cells[1, 1] = "Producto";
+            worksheet.Cells[1, 2] = "Cantidad";
+            worksheet.Cells[1, 3] = "Precio";
+
+
+            int indiceFila = 2;
+            foreach (ListViewItem item in lvSandwich.Items)
+            {
+                worksheet.Cells[indiceFila, 1] = item.SubItems[0].Text; // Producto
+                worksheet.Cells[indiceFila, 2] = item.SubItems[1].Text; // Cantidad
+                worksheet.Cells[indiceFila, 3] = item.SubItems[2].Text; // Precio
+                indiceFila++;
+            }
+
+            worksheet.Cells[indiceFila, 1] = "Precio Total:";
+            worksheet.Cells[indiceFila, 3] = lblPrecioTotal.Text;
+
+
+            string NomArchivo = "Factura.xlsx";
+            workbook.SaveAs(NomArchivo);
+
+
+            workbook.Close();
+            excelApp.Quit();
+            System.Runtime.InteropServices.Marshal.ReleaseComObject(excelApp);
+
+            MessageBox.Show("Factura exportada con exito a Excel", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
