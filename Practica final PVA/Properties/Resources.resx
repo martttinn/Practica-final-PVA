@@ -145,6 +145,9 @@
   <data name="_9de3c274-0239-444a-b2c0-bdaa3e2c78f2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\_9de3c274-0239-444a-b2c0-bdaa3e2c78f2.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="flecha-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flecha-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icono imagen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icono imagen.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -156,9 +159,6 @@
   </data>
   <data name="_fe78f90a-0a69-4c96-9cb8-a70c614de56b" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\_fe78f90a-0a69-4c96-9cb8-a70c614de56b.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_5aaa66a8-dda6-4885-923e-b485eb32641e" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\_5aaa66a8-dda6-4885-923e-b485eb32641e.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Sandwich 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sandwich 2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,6 +187,9 @@
   <data name="Foto admin 4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Foto admin 4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="_d988f85a-1827-4c1c-bdc3-d7ff2e23b025" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\_d988f85a-1827-4c1c-bdc3-d7ff2e23b025.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Sandwich 9" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sandwich 9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -196,10 +199,10 @@
   <data name="Sandwich 3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sandwich 3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_d988f85a-1827-4c1c-bdc3-d7ff2e23b025" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\_d988f85a-1827-4c1c-bdc3-d7ff2e23b025.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="_5aaa66a8-dda6-4885-923e-b485eb32641e" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\_5aaa66a8-dda6-4885-923e-b485eb32641e.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="flecha-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flecha-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="_dc4d7e1a-bcaa-450d-9bb7-05a3ccc607e2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\_dc4d7e1a-bcaa-450d-9bb7-05a3ccc607e2.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

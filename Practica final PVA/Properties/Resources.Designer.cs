@@ -123,6 +123,16 @@ namespace Practica_final_PVA.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _dc4d7e1a_bcaa_450d_9bb7_05a3ccc607e2 {
+            get {
+                object obj = ResourceManager.GetObject("_dc4d7e1a-bcaa-450d-9bb7-05a3ccc607e2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _fe78f90a_0a69_4c96_9cb8_a70c614de56b {
             get {
                 object obj = ResourceManager.GetObject("_fe78f90a-0a69-4c96-9cb8-a70c614de56b", resourceCulture);

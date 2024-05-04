@@ -30,14 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioAdmin));
             this.btnSalir = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.Imagen1 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.Imagen3 = new System.Windows.Forms.PictureBox();
             this.lblTotalPedidos = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,28 +45,33 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnModificarSandwich = new System.Windows.Forms.Button();
-            this.btnListarVentas = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.btnAdministrador = new System.Windows.Forms.Button();
-            this.btnUsuarios = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.Imagen2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnModificarSandwich = new System.Windows.Forms.Button();
+            this.btnListarVentas = new System.Windows.Forms.Button();
+            this.btnAdministrador = new System.Windows.Forms.Button();
+            this.btnUsuarios = new System.Windows.Forms.Button();
+            this.Imagen3 = new System.Windows.Forms.PictureBox();
+            this.Imagen1 = new System.Windows.Forms.PictureBox();
             this.btnPerfil = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Imagen1)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Imagen3)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Imagen2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Imagen3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Imagen1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalir
@@ -82,13 +84,6 @@
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(182, 22);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(266, 26);
-            this.textBox1.TabIndex = 5;
             // 
             // label1
             // 
@@ -122,16 +117,6 @@
             this.label5.TabIndex = 13;
             this.label5.Text = "Top ventas";
             // 
-            // Imagen1
-            // 
-            this.Imagen1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Imagen1.Location = new System.Drawing.Point(48, 72);
-            this.Imagen1.Name = "Imagen1";
-            this.Imagen1.Size = new System.Drawing.Size(124, 115);
-            this.Imagen1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Imagen1.TabIndex = 0;
-            this.Imagen1.TabStop = false;
-            // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Gainsboro;
@@ -152,15 +137,6 @@
             this.label6.Size = new System.Drawing.Size(143, 25);
             this.label6.TabIndex = 13;
             this.label6.Text = "Menor ventas";
-            // 
-            // Imagen3
-            // 
-            this.Imagen3.Location = new System.Drawing.Point(60, 72);
-            this.Imagen3.Name = "Imagen3";
-            this.Imagen3.Size = new System.Drawing.Size(124, 115);
-            this.Imagen3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Imagen3.TabIndex = 12;
-            this.Imagen3.TabStop = false;
             // 
             // lblTotalPedidos
             // 
@@ -274,30 +250,6 @@
             this.label3.TabIndex = 24;
             this.label3.Text = "Listar ventas";
             // 
-            // btnModificarSandwich
-            // 
-            this.btnModificarSandwich.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnModificarSandwich.BackgroundImage = global::Practica_final_PVA.Properties.Resources._d038b030_4cad_439e_a242_2ccef4c09934;
-            this.btnModificarSandwich.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnModificarSandwich.Location = new System.Drawing.Point(285, 158);
-            this.btnModificarSandwich.Name = "btnModificarSandwich";
-            this.btnModificarSandwich.Size = new System.Drawing.Size(68, 75);
-            this.btnModificarSandwich.TabIndex = 23;
-            this.btnModificarSandwich.UseVisualStyleBackColor = false;
-            this.btnModificarSandwich.Click += new System.EventHandler(this.btnModificarSandwich_Click);
-            // 
-            // btnListarVentas
-            // 
-            this.btnListarVentas.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnListarVentas.BackgroundImage = global::Practica_final_PVA.Properties.Resources.icono_registrar_ventas;
-            this.btnListarVentas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnListarVentas.Location = new System.Drawing.Point(285, 59);
-            this.btnListarVentas.Name = "btnListarVentas";
-            this.btnListarVentas.Size = new System.Drawing.Size(68, 75);
-            this.btnListarVentas.TabIndex = 22;
-            this.btnListarVentas.UseVisualStyleBackColor = false;
-            this.btnListarVentas.Click += new System.EventHandler(this.btnListarVentas_Click);
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -317,30 +269,6 @@
             this.label11.Size = new System.Drawing.Size(80, 20);
             this.label11.TabIndex = 20;
             this.label11.Text = "Usuarios";
-            // 
-            // btnAdministrador
-            // 
-            this.btnAdministrador.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnAdministrador.BackgroundImage = global::Practica_final_PVA.Properties.Resources._5aaa66a8_dda6_4885_923e_b485eb32641e;
-            this.btnAdministrador.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAdministrador.Location = new System.Drawing.Point(12, 158);
-            this.btnAdministrador.Name = "btnAdministrador";
-            this.btnAdministrador.Size = new System.Drawing.Size(68, 75);
-            this.btnAdministrador.TabIndex = 19;
-            this.btnAdministrador.UseVisualStyleBackColor = false;
-            this.btnAdministrador.Click += new System.EventHandler(this.btnAdministrador_Click);
-            // 
-            // btnUsuarios
-            // 
-            this.btnUsuarios.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnUsuarios.BackgroundImage = global::Practica_final_PVA.Properties.Resources._fe78f90a_0a69_4c96_9cb8_a70c614de56b;
-            this.btnUsuarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnUsuarios.Location = new System.Drawing.Point(12, 57);
-            this.btnUsuarios.Name = "btnUsuarios";
-            this.btnUsuarios.Size = new System.Drawing.Size(68, 75);
-            this.btnUsuarios.TabIndex = 18;
-            this.btnUsuarios.UseVisualStyleBackColor = false;
-            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
             // label10
             // 
@@ -363,6 +291,7 @@
             // groupBox6
             // 
             this.groupBox6.BackColor = System.Drawing.Color.Gainsboro;
+            this.groupBox6.Controls.Add(this.pictureBox1);
             this.groupBox6.Location = new System.Drawing.Point(542, 423);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(201, 262);
@@ -403,6 +332,83 @@
             this.Imagen2.TabIndex = 0;
             this.Imagen2.TabStop = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Practica_final_PVA.Properties.Resources._dc4d7e1a_bcaa_450d_9bb7_05a3ccc607e2;
+            this.pictureBox1.Location = new System.Drawing.Point(10, 48);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(172, 170);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnModificarSandwich
+            // 
+            this.btnModificarSandwich.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnModificarSandwich.BackgroundImage = global::Practica_final_PVA.Properties.Resources._d038b030_4cad_439e_a242_2ccef4c09934;
+            this.btnModificarSandwich.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnModificarSandwich.Location = new System.Drawing.Point(285, 158);
+            this.btnModificarSandwich.Name = "btnModificarSandwich";
+            this.btnModificarSandwich.Size = new System.Drawing.Size(68, 75);
+            this.btnModificarSandwich.TabIndex = 23;
+            this.btnModificarSandwich.UseVisualStyleBackColor = false;
+            this.btnModificarSandwich.Click += new System.EventHandler(this.btnModificarSandwich_Click);
+            // 
+            // btnListarVentas
+            // 
+            this.btnListarVentas.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnListarVentas.BackgroundImage = global::Practica_final_PVA.Properties.Resources.icono_registrar_ventas;
+            this.btnListarVentas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnListarVentas.Location = new System.Drawing.Point(285, 59);
+            this.btnListarVentas.Name = "btnListarVentas";
+            this.btnListarVentas.Size = new System.Drawing.Size(68, 75);
+            this.btnListarVentas.TabIndex = 22;
+            this.btnListarVentas.UseVisualStyleBackColor = false;
+            this.btnListarVentas.Click += new System.EventHandler(this.btnListarVentas_Click);
+            // 
+            // btnAdministrador
+            // 
+            this.btnAdministrador.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnAdministrador.BackgroundImage = global::Practica_final_PVA.Properties.Resources._5aaa66a8_dda6_4885_923e_b485eb32641e;
+            this.btnAdministrador.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAdministrador.Location = new System.Drawing.Point(12, 158);
+            this.btnAdministrador.Name = "btnAdministrador";
+            this.btnAdministrador.Size = new System.Drawing.Size(68, 75);
+            this.btnAdministrador.TabIndex = 19;
+            this.btnAdministrador.UseVisualStyleBackColor = false;
+            this.btnAdministrador.Click += new System.EventHandler(this.btnAdministrador_Click);
+            // 
+            // btnUsuarios
+            // 
+            this.btnUsuarios.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnUsuarios.BackgroundImage = global::Practica_final_PVA.Properties.Resources._fe78f90a_0a69_4c96_9cb8_a70c614de56b;
+            this.btnUsuarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnUsuarios.Location = new System.Drawing.Point(12, 57);
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Size = new System.Drawing.Size(68, 75);
+            this.btnUsuarios.TabIndex = 18;
+            this.btnUsuarios.UseVisualStyleBackColor = false;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
+            // 
+            // Imagen3
+            // 
+            this.Imagen3.Location = new System.Drawing.Point(60, 72);
+            this.Imagen3.Name = "Imagen3";
+            this.Imagen3.Size = new System.Drawing.Size(124, 115);
+            this.Imagen3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Imagen3.TabIndex = 12;
+            this.Imagen3.TabStop = false;
+            // 
+            // Imagen1
+            // 
+            this.Imagen1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Imagen1.Location = new System.Drawing.Point(48, 72);
+            this.Imagen1.Name = "Imagen1";
+            this.Imagen1.Size = new System.Drawing.Size(124, 115);
+            this.Imagen1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Imagen1.TabIndex = 0;
+            this.Imagen1.TabStop = false;
+            // 
             // btnPerfil
             // 
             this.btnPerfil.BackgroundImage = global::Practica_final_PVA.Properties.Resources.icono_persona_2;
@@ -431,26 +437,27 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnPerfil);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormularioAdmin";
             this.Text = "Sandwich Sprint - Panel admin";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Imagen1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Imagen3)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Imagen2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Imagen3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Imagen1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -460,7 +467,6 @@
 
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnPerfil;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -490,5 +496,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnModificarSandwich;
         private System.Windows.Forms.Button btnListarVentas;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

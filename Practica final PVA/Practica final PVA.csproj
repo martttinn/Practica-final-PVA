@@ -318,5 +318,8 @@
   <ItemGroup>
     <None Include="Resources\flecha-removebg-preview.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_dc4d7e1a-bcaa-450d-9bb7-05a3ccc607e2.jpeg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
