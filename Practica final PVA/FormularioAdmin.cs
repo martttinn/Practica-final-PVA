@@ -46,59 +46,43 @@ namespace Practica_final_PVA
 
         private void CargarImagenSandwich(string nombreSandwich, PictureBox pictureBox)
         {
-            string rutaImagen = IdentificarFoto(nombreSandwich);
-            try
+            switch (nombreSandwich)
             {
-                pictureBox.Image = Image.FromFile(rutaImagen);
+                case "Sandwich barbacoa":
+                    pictureBox.Image = Properties.Resources.Sandwich_1;
+                    break;
+                case "Sandwich de atun":
+                    pictureBox.Image = Properties.Resources.Sandwich_2;
+                    break;
+                case "Sandwich de carbonara":
+                    pictureBox.Image = Properties.Resources.Sandwich_3;
+                    break;
+                case "Sandwich de cebolla":
+                    pictureBox.Image = Properties.Resources.Sandwich_4;
+                    break;
+                case "Sandwich de chorizo":
+                    pictureBox.Image = Properties.Resources.Sandwich_5;
+                    break;
+                case "Sandwich de jamon":
+                    pictureBox.Image = Properties.Resources.Sandwich_6;
+                    break;
+                case "Sandwich de pechuga":
+                    pictureBox.Image = Properties.Resources.Sandwich_7;
+                    break;
+                case "Sandwich de salchicha":
+                    pictureBox.Image = Properties.Resources.Sandwich_8;
+                    break;
+                case "Sandwich jamon york":
+                    pictureBox.Image = Properties.Resources.Sandwich_9;
+                    break;
+                default:
+                    MessageBox.Show("Imagen no encontrada.");
+                    break;
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error al cargar la imagen: {ex.Message}");
-            }
+       
+
         }
 
-        private string IdentificarFoto(string nombreSandwich)
-        {
-            
-            string rutaImagen = "";
-            if (nombreSandwich.Equals("Sandwich barbacoa"))
-            {
-                rutaImagen = "C:/Programacion visual avanzada/Trabajo Final PVA/imagenes/sandwich barbacoa.jpeg";
-            }
-            else if(nombreSandwich.Equals("Sandwich de atun"))
-            {
-                rutaImagen = "C:/Programacion visual avanzada/Trabajo Final PVA/imagenes/sandwich de atun.jpeg";
-            }else if (nombreSandwich.Equals("Sandwich de carbonara"))
-            {
-                rutaImagen = "C:/Programacion visual avanzada/Trabajo Final PVA/imagenes/sandwich de carbonara.jpeg";
-            }
-            else if (nombreSandwich.Equals("Sandwich de cebolla"))
-            {
-                rutaImagen = "C:/Programacion visual avanzada/Trabajo Final PVA/imagenes/sandwich de cebolla.jpeg";
-            }
-            else if (nombreSandwich.Equals("Sandwich de chorizo"))
-            {
-                rutaImagen = "C:/Programacion visual avanzada/Trabajo Final PVA/imagenes/sandwich de chorizo.jpeg";
-            }
-            else if (nombreSandwich.Equals("Sandwich de jamon"))
-            {
-                rutaImagen = "C:/Programacion visual avanzada/Trabajo Final PVA/imagenes/sandwich de jamon.jpeg";
-            }
-            else if (nombreSandwich.Equals("Sandwich de pechuga"))
-            {
-                rutaImagen = "C:/Programacion visual avanzada/Trabajo Final PVA/imagenes/sandwich de pechuga.jpeg";
-            }
-            else if (nombreSandwich.Equals("Sandwich de salchicha"))
-            {
-                rutaImagen = "C:/Programacion visual avanzada/Trabajo Final PVA/imagenes/sandwich de salchicha.jpeg";
-            }
-            else if (nombreSandwich.Equals("Sandwich jamon york"))
-            {
-                rutaImagen = "C:/Programacion visual avanzada/Trabajo Final PVA/imagenes/sandwich jamon york.jpeg";
-            }
-
-            return rutaImagen;
-        }
 
         private void ObtenerNumeroTotalVentas()
         {
