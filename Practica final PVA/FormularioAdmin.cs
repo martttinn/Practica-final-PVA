@@ -232,6 +232,13 @@ namespace Practica_final_PVA
             ListarAdministradores listarAdministradores = new ListarAdministradores();
             listarAdministradores.Show();
         }
+
+        private void btnModificarSandwich_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            ModificarSandwichPredeterminado modificarSandwichPredeterminado = new ModificarSandwichPredeterminado();
+            modificarSandwichPredeterminado.Show();
+        }
     }
 
 }

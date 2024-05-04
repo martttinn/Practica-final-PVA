@@ -48,7 +48,7 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnModificarSandwich = new System.Windows.Forms.Button();
             this.btnListarVentas = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -239,7 +239,7 @@
             this.groupBox5.BackColor = System.Drawing.Color.Gainsboro;
             this.groupBox5.Controls.Add(this.label7);
             this.groupBox5.Controls.Add(this.label3);
-            this.groupBox5.Controls.Add(this.button2);
+            this.groupBox5.Controls.Add(this.btnModificarSandwich);
             this.groupBox5.Controls.Add(this.btnListarVentas);
             this.groupBox5.Controls.Add(this.label12);
             this.groupBox5.Controls.Add(this.label11);
@@ -274,16 +274,17 @@
             this.label3.TabIndex = 24;
             this.label3.Text = "Listar ventas";
             // 
-            // button2
+            // btnModificarSandwich
             // 
-            this.button2.BackColor = System.Drawing.Color.Gainsboro;
-            this.button2.BackgroundImage = global::Practica_final_PVA.Properties.Resources._d038b030_4cad_439e_a242_2ccef4c09934;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.Location = new System.Drawing.Point(285, 158);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(68, 75);
-            this.button2.TabIndex = 23;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnModificarSandwich.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnModificarSandwich.BackgroundImage = global::Practica_final_PVA.Properties.Resources._d038b030_4cad_439e_a242_2ccef4c09934;
+            this.btnModificarSandwich.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnModificarSandwich.Location = new System.Drawing.Point(285, 158);
+            this.btnModificarSandwich.Name = "btnModificarSandwich";
+            this.btnModificarSandwich.Size = new System.Drawing.Size(68, 75);
+            this.btnModificarSandwich.TabIndex = 23;
+            this.btnModificarSandwich.UseVisualStyleBackColor = false;
+            this.btnModificarSandwich.Click += new System.EventHandler(this.btnModificarSandwich_Click);
             // 
             // btnListarVentas
             // 
@@ -487,7 +488,7 @@
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnModificarSandwich;
         private System.Windows.Forms.Button btnListarVentas;
     }
 }

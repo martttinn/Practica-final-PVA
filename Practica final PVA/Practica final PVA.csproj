@@ -93,6 +93,12 @@
     <Compile Include="ListarVentas.Designer.cs">
       <DependentUpon>ListarVentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModificarSandwichPredeterminado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarSandwichPredeterminado.Designer.cs">
+      <DependentUpon>ModificarSandwichPredeterminado.cs</DependentUpon>
+    </Compile>
     <Compile Include="MontaTuSandwich.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ListarVentas.resx">
       <DependentUpon>ListarVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarSandwichPredeterminado.resx">
+      <DependentUpon>ModificarSandwichPredeterminado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MontaTuSandwich.resx">
       <DependentUpon>MontaTuSandwich.cs</DependentUpon>
