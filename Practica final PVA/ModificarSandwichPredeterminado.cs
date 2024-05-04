@@ -12,6 +12,7 @@ namespace Practica_final_PVA
 {
     public partial class ModificarSandwichPredeterminado : Form
     {
+        private int pictureBoxSeleccionado = -1;
         public ModificarSandwichPredeterminado()
         {
             InitializeComponent();
@@ -23,10 +24,9 @@ namespace Practica_final_PVA
             FormularioAdmin formularioAdmin = new FormularioAdmin();
             formularioAdmin.Show();
         }
-
-        private void btnModificar_Click(object sender, EventArgs e)
-        {
-            
-        }
+    
+        
+        
     }
+
 }

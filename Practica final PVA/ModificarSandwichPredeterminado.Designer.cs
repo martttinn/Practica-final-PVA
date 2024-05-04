@@ -29,16 +29,6 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.btnModificar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,15 +40,15 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            this.btnSandwich1 = new System.Windows.Forms.Button();
+            this.btnSandwich2 = new System.Windows.Forms.Button();
+            this.btnSandwich3 = new System.Windows.Forms.Button();
+            this.btnSandwich4 = new System.Windows.Forms.Button();
+            this.btnSandwich5 = new System.Windows.Forms.Button();
+            this.btnSandwich6 = new System.Windows.Forms.Button();
+            this.btnSandwich7 = new System.Windows.Forms.Button();
+            this.btnSandwich8 = new System.Windows.Forms.Button();
+            this.btnSandwich9 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -71,107 +61,6 @@
             this.label1.Size = new System.Drawing.Size(276, 40);
             this.label1.TabIndex = 7;
             this.label1.Text = "Modificar Sandwich";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Practica_final_PVA.Properties.Resources.Sandwich_1;
-            this.pictureBox1.Location = new System.Drawing.Point(19, 75);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(111, 105);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Practica_final_PVA.Properties.Resources.Sandwich_2;
-            this.pictureBox2.Location = new System.Drawing.Point(209, 75);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(111, 105);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 9;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Practica_final_PVA.Properties.Resources.Sandwich_3;
-            this.pictureBox3.Location = new System.Drawing.Point(398, 75);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(111, 105);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 10;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::Practica_final_PVA.Properties.Resources.Sandwich_4;
-            this.pictureBox4.Location = new System.Drawing.Point(570, 75);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(111, 105);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 11;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::Practica_final_PVA.Properties.Resources.Sandwich_5;
-            this.pictureBox5.Location = new System.Drawing.Point(19, 236);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(111, 105);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 12;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::Practica_final_PVA.Properties.Resources.Sandwich_6;
-            this.pictureBox6.Location = new System.Drawing.Point(209, 236);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(111, 105);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 13;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::Practica_final_PVA.Properties.Resources.Sandwich_7;
-            this.pictureBox7.Location = new System.Drawing.Point(398, 236);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(111, 105);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 14;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::Practica_final_PVA.Properties.Resources.Sandwich_8;
-            this.pictureBox8.Location = new System.Drawing.Point(570, 236);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(111, 105);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 15;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Image = global::Practica_final_PVA.Properties.Resources.Sandwich_9;
-            this.pictureBox9.Location = new System.Drawing.Point(19, 396);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(111, 105);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox9.TabIndex = 16;
-            this.pictureBox9.TabStop = false;
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.BackColor = System.Drawing.Color.Transparent;
-            this.btnModificar.Location = new System.Drawing.Point(519, 522);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(89, 33);
-            this.btnModificar.TabIndex = 17;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = false;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnCerrar
             // 
@@ -284,12 +173,111 @@
             this.label11.TabIndex = 28;
             this.label11.Text = "Elija el sandwich a modificar!!";
             // 
+            // btnSandwich1
+            // 
+            this.btnSandwich1.BackgroundImage = global::Practica_final_PVA.Properties.Resources.Sandwich_1;
+            this.btnSandwich1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSandwich1.Location = new System.Drawing.Point(19, 76);
+            this.btnSandwich1.Name = "btnSandwich1";
+            this.btnSandwich1.Size = new System.Drawing.Size(111, 104);
+            this.btnSandwich1.TabIndex = 29;
+            this.btnSandwich1.UseVisualStyleBackColor = true;
+            // 
+            // btnSandwich2
+            // 
+            this.btnSandwich2.BackgroundImage = global::Practica_final_PVA.Properties.Resources.Sandwich_2;
+            this.btnSandwich2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSandwich2.Location = new System.Drawing.Point(209, 76);
+            this.btnSandwich2.Name = "btnSandwich2";
+            this.btnSandwich2.Size = new System.Drawing.Size(111, 104);
+            this.btnSandwich2.TabIndex = 30;
+            this.btnSandwich2.UseVisualStyleBackColor = true;
+            // 
+            // btnSandwich3
+            // 
+            this.btnSandwich3.BackgroundImage = global::Practica_final_PVA.Properties.Resources.Sandwich_3;
+            this.btnSandwich3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSandwich3.Location = new System.Drawing.Point(398, 76);
+            this.btnSandwich3.Name = "btnSandwich3";
+            this.btnSandwich3.Size = new System.Drawing.Size(111, 104);
+            this.btnSandwich3.TabIndex = 31;
+            this.btnSandwich3.UseVisualStyleBackColor = true;
+            // 
+            // btnSandwich4
+            // 
+            this.btnSandwich4.BackgroundImage = global::Practica_final_PVA.Properties.Resources.Sandwich_4;
+            this.btnSandwich4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSandwich4.Location = new System.Drawing.Point(570, 76);
+            this.btnSandwich4.Name = "btnSandwich4";
+            this.btnSandwich4.Size = new System.Drawing.Size(111, 104);
+            this.btnSandwich4.TabIndex = 32;
+            this.btnSandwich4.UseVisualStyleBackColor = true;
+            // 
+            // btnSandwich5
+            // 
+            this.btnSandwich5.BackgroundImage = global::Practica_final_PVA.Properties.Resources.Sandwich_5;
+            this.btnSandwich5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSandwich5.Location = new System.Drawing.Point(19, 237);
+            this.btnSandwich5.Name = "btnSandwich5";
+            this.btnSandwich5.Size = new System.Drawing.Size(111, 104);
+            this.btnSandwich5.TabIndex = 33;
+            this.btnSandwich5.UseVisualStyleBackColor = true;
+            // 
+            // btnSandwich6
+            // 
+            this.btnSandwich6.BackgroundImage = global::Practica_final_PVA.Properties.Resources.Sandwich_6;
+            this.btnSandwich6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSandwich6.Location = new System.Drawing.Point(209, 237);
+            this.btnSandwich6.Name = "btnSandwich6";
+            this.btnSandwich6.Size = new System.Drawing.Size(111, 104);
+            this.btnSandwich6.TabIndex = 34;
+            this.btnSandwich6.UseVisualStyleBackColor = true;
+            // 
+            // btnSandwich7
+            // 
+            this.btnSandwich7.BackgroundImage = global::Practica_final_PVA.Properties.Resources.Sandwich_7;
+            this.btnSandwich7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSandwich7.Location = new System.Drawing.Point(398, 237);
+            this.btnSandwich7.Name = "btnSandwich7";
+            this.btnSandwich7.Size = new System.Drawing.Size(111, 104);
+            this.btnSandwich7.TabIndex = 35;
+            this.btnSandwich7.UseVisualStyleBackColor = true;
+            // 
+            // btnSandwich8
+            // 
+            this.btnSandwich8.BackgroundImage = global::Practica_final_PVA.Properties.Resources.Sandwich_8;
+            this.btnSandwich8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSandwich8.Location = new System.Drawing.Point(570, 237);
+            this.btnSandwich8.Name = "btnSandwich8";
+            this.btnSandwich8.Size = new System.Drawing.Size(111, 104);
+            this.btnSandwich8.TabIndex = 36;
+            this.btnSandwich8.UseVisualStyleBackColor = true;
+            // 
+            // btnSandwich9
+            // 
+            this.btnSandwich9.BackgroundImage = global::Practica_final_PVA.Properties.Resources.Sandwich_9;
+            this.btnSandwich9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSandwich9.Location = new System.Drawing.Point(19, 403);
+            this.btnSandwich9.Name = "btnSandwich9";
+            this.btnSandwich9.Size = new System.Drawing.Size(111, 104);
+            this.btnSandwich9.TabIndex = 37;
+            this.btnSandwich9.UseVisualStyleBackColor = true;
+            // 
             // ModificarSandwichPredeterminado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(30)))), ((int)(((byte)(11)))));
             this.ClientSize = new System.Drawing.Size(724, 567);
+            this.Controls.Add(this.btnSandwich9);
+            this.Controls.Add(this.btnSandwich8);
+            this.Controls.Add(this.btnSandwich7);
+            this.Controls.Add(this.btnSandwich6);
+            this.Controls.Add(this.btnSandwich5);
+            this.Controls.Add(this.btnSandwich4);
+            this.Controls.Add(this.btnSandwich3);
+            this.Controls.Add(this.btnSandwich2);
+            this.Controls.Add(this.btnSandwich1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -301,28 +289,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnCerrar);
-            this.Controls.Add(this.btnModificar);
-            this.Controls.Add(this.pictureBox9);
-            this.Controls.Add(this.pictureBox8);
-            this.Controls.Add(this.pictureBox7);
-            this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Name = "ModificarSandwichPredeterminado";
             this.Text = "ModificarSandwichPredeterminado";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -331,16 +300,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -352,5 +311,14 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button btnSandwich1;
+        private System.Windows.Forms.Button btnSandwich2;
+        private System.Windows.Forms.Button btnSandwich3;
+        private System.Windows.Forms.Button btnSandwich4;
+        private System.Windows.Forms.Button btnSandwich5;
+        private System.Windows.Forms.Button btnSandwich6;
+        private System.Windows.Forms.Button btnSandwich7;
+        private System.Windows.Forms.Button btnSandwich8;
+        private System.Windows.Forms.Button btnSandwich9;
     }
 }
