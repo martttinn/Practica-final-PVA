@@ -59,6 +59,7 @@ namespace Practica_final_PVA
 
         private string IdentificarFoto(string nombreSandwich)
         {
+            
             string rutaImagen = "";
             if (nombreSandwich.Equals("Sandwich barbacoa"))
             {

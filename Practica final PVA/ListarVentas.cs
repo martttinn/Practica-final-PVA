@@ -6,6 +6,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,7 +19,8 @@ namespace Practica_final_PVA
         {
             InitializeComponent();
             ObtenerNumeroTotalVentas();
-            ObtenerPrimeraColumnaList();
+            ObtenerPrimeraFilaList();
+            ObtenerRestoFilas();
         }
 
         private int ObtenerNumeroTotalVentas()
@@ -46,7 +48,7 @@ namespace Practica_final_PVA
         }
 
         private int Conteo = 1;
-        private void ObtenerPrimeraColumnaList()
+        private void ObtenerPrimeraFilaList()
         {
             string connectionString = "server=(local)\\SQLEXPRESS;database=master; Integrated Security = SSPI";
             string query = "SELECT Id FROM VENTAS ORDER BY FechaVenta ASC";
@@ -98,6 +100,118 @@ namespace Practica_final_PVA
                 listView1.Items.Add(item);
             }
         }
+
+        private void CrearTablaOrdenadaEnServidor()
+        {
+            string connectionString = "server=(local)\\SQLEXPRESS;database=master; Integrated Security = SSPI";
+            string query = @"
+            CREATE TABLE #TablaTemporal (
+            ID INT IDENTITY(1,1),
+            FechaVenta DATETIME
+            )
+
+            INSERT INTO #TablaTemporal (FechaVenta)
+            SELECT FechaVenta FROM VENTAS ORDER BY FechaVenta ASC
+
+            CREATE TABLE TablaOrdenada (
+            ID INT IDENTITY(1,1),
+            FechaVenta DATETIME
+            )
+
+            INSERT INTO TablaOrdenada (FechaVenta)
+            SELECT FechaVenta FROM #TablaTemporal
+
+            DROP TABLE #TablaTemporal";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                connection.Open();
+                command.ExecuteNonQuery();
+            }
+        }
+
+        private bool TablaOrdenadaExiste()
+        {
+            string connectionString = "server=(local)\\SQLEXPRESS;database=master; Integrated Security = SSPI";
+            string query = "SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'TablaOrdenada'";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                connection.Open();
+
+                int count = (int)command.ExecuteScalar();
+
+                return count > 0;
+            }
+        }
+
+        private void ObtenerRestoFilas()
+        {
+            if (!TablaOrdenadaExiste())
+            {
+                CrearTablaOrdenadaEnServidor();
+            }
+
+            int totalPedidos = ObtenerNumeroTotalVentas();
+
+            for (int IdSiguiente = 2; IdSiguiente <= totalPedidos; IdSiguiente++)
+            {
+                string connectionString = "server=(local)\\SQLEXPRESS;database=master; Integrated Security = SSPI";
+                string queryFecha = "SELECT FechaVenta FROM TablaOrdenada WHERE ID = @Ident";
+                string queryId = "SELECT Id FROM VENTAS WHERE FechaVenta = @Fecha";
+                string queryNombre = "SELECT DV.NomProducto AS Producto FROM DETALLESVENTA DV INNER JOIN VENTAS V ON DV.IDVenta = V.Id WHERE DV.IDVenta = @ID";
+                string queryPrecio = "SELECT PrecioTotal FROM VENTAS WHERE Id = @Id";
+                string queryDNI = "SELECT DNI FROM VENTAS WHERE Id = @iD";
+
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    try
+                    {
+                        connection.Open();
+
+                        // Obtener fecha de venta
+                        SqlCommand commandFecha = new SqlCommand(queryFecha, connection);
+                        commandFecha.Parameters.AddWithValue("@Ident", IdSiguiente);
+                        DateTime fecha = (DateTime)commandFecha.ExecuteScalar();
+
+                        // Obtener ID de venta
+                        SqlCommand commandId = new SqlCommand(queryId, connection);
+                        commandId.Parameters.AddWithValue("@Fecha", fecha);
+                        int Id = (int)commandId.ExecuteScalar();
+
+                        // Obtener nombre de producto
+                        SqlCommand commandNombre = new SqlCommand(queryNombre, connection);
+                        commandNombre.Parameters.AddWithValue("@ID", Id);
+                        string nombre = (string)commandNombre.ExecuteScalar();
+
+                        // Obtener precio total
+                        SqlCommand commandPrecio = new SqlCommand(queryPrecio, connection);
+                        commandPrecio.Parameters.AddWithValue("@Id", Id);
+                        decimal precio = (decimal)commandPrecio.ExecuteScalar();
+
+                        // Obtener DNI
+                        SqlCommand commandDNI = new SqlCommand(queryDNI, connection);
+                        commandDNI.Parameters.AddWithValue("@iD", Id);
+                        string DNI = (string)commandDNI.ExecuteScalar();
+
+                        // Agregar fila a ListView
+                        ListViewItem item = new ListViewItem(IdSiguiente.ToString());
+                        item.SubItems.Add(nombre);
+                        item.SubItems.Add(fecha.ToShortDateString());
+                        item.SubItems.Add(precio.ToString());
+                        item.SubItems.Add(DNI);
+                        listView1.Items.Add(item);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
+                }
+            }
+        }
+
 
     }
 }
