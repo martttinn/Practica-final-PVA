@@ -36,7 +36,6 @@
             this.cHDNI = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cHNombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cHContrasena = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.cHTotalPedidos = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -47,7 +46,7 @@
             this.lblTotalAdministradores.AutoSize = true;
             this.lblTotalAdministradores.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalAdministradores.ForeColor = System.Drawing.Color.Cornsilk;
-            this.lblTotalAdministradores.Location = new System.Drawing.Point(715, 69);
+            this.lblTotalAdministradores.Location = new System.Drawing.Point(615, 70);
             this.lblTotalAdministradores.Name = "lblTotalAdministradores";
             this.lblTotalAdministradores.Size = new System.Drawing.Size(72, 52);
             this.lblTotalAdministradores.TabIndex = 17;
@@ -58,7 +57,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label2.Location = new System.Drawing.Point(669, 121);
+            this.label2.Location = new System.Drawing.Point(569, 122);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(153, 25);
             this.label2.TabIndex = 16;
@@ -66,7 +65,7 @@
             // 
             // btnCerrar
             // 
-            this.btnCerrar.Location = new System.Drawing.Point(704, 382);
+            this.btnCerrar.Location = new System.Drawing.Point(608, 382);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(110, 32);
             this.btnCerrar.TabIndex = 14;
@@ -80,12 +79,11 @@
             this.cHUsuario,
             this.cHDNI,
             this.cHNombre,
-            this.cHContrasena,
-            this.cHTotalPedidos});
+            this.cHContrasena});
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(12, 52);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(651, 324);
+            this.listView1.Size = new System.Drawing.Size(537, 324);
             this.listView1.TabIndex = 13;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -113,12 +111,6 @@
             this.cHContrasena.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.cHContrasena.Width = 170;
             // 
-            // cHTotalPedidos
-            // 
-            this.cHTotalPedidos.Text = "Total pedidos";
-            this.cHTotalPedidos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.cHTotalPedidos.Width = 124;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -133,7 +125,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Practica_final_PVA.Properties.Resources.icono_imagen;
-            this.pictureBox1.Location = new System.Drawing.Point(693, 162);
+            this.pictureBox1.Location = new System.Drawing.Point(593, 163);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(111, 109);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -145,7 +137,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(30)))), ((int)(((byte)(11)))));
-            this.ClientSize = new System.Drawing.Size(826, 426);
+            this.ClientSize = new System.Drawing.Size(730, 426);
             this.Controls.Add(this.lblTotalAdministradores);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
@@ -171,7 +163,6 @@
         private System.Windows.Forms.ColumnHeader cHDNI;
         private System.Windows.Forms.ColumnHeader cHNombre;
         private System.Windows.Forms.ColumnHeader cHContrasena;
-        private System.Windows.Forms.ColumnHeader cHTotalPedidos;
         private System.Windows.Forms.Label label1;
     }
 }
