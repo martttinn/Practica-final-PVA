@@ -46,6 +46,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.Cornsilk;
             this.label1.Location = new System.Drawing.Point(12, 5);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(373, 40);
@@ -111,6 +112,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Cornsilk;
             this.label2.Location = new System.Drawing.Point(705, 117);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 25);
@@ -121,6 +123,7 @@
             // 
             this.lblTotalPedidos.AutoSize = true;
             this.lblTotalPedidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalPedidos.ForeColor = System.Drawing.Color.Cornsilk;
             this.lblTotalPedidos.Location = new System.Drawing.Point(715, 65);
             this.lblTotalPedidos.Name = "lblTotalPedidos";
             this.lblTotalPedidos.Size = new System.Drawing.Size(47, 52);
@@ -141,6 +144,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(30)))), ((int)(((byte)(11)))));
             this.ClientSize = new System.Drawing.Size(827, 425);
             this.Controls.Add(this.lblTotalPedidos);
             this.Controls.Add(this.label2);

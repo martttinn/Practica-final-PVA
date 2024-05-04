@@ -218,6 +218,13 @@ namespace Practica_final_PVA
             ListarVentas listarVentas = new ListarVentas();
             listarVentas.Show();
         }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            ListarUsuarios listarUsuarios = new ListarUsuarios();
+            listarUsuarios.Show();
+        }
     }
 
 }

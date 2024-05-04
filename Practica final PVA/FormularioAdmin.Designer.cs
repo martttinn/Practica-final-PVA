@@ -34,8 +34,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.Imagen1 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.Imagen3 = new System.Windows.Forms.PictureBox();
             this.lblTotalPedidos = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,32 +46,30 @@
             this.label4 = new System.Windows.Forms.Label();
             this.lblUltimaFechaPedido = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnListarVentas = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.btnUsuarios = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.Imagen2 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btnListarVentas = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.Imagen3 = new System.Windows.Forms.PictureBox();
-            this.Imagen1 = new System.Windows.Forms.PictureBox();
             this.btnPerfil = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Imagen1)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Imagen3)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Imagen2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Imagen3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Imagen1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalir
@@ -122,6 +122,16 @@
             this.label5.TabIndex = 13;
             this.label5.Text = "Top ventas";
             // 
+            // Imagen1
+            // 
+            this.Imagen1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Imagen1.Location = new System.Drawing.Point(48, 72);
+            this.Imagen1.Name = "Imagen1";
+            this.Imagen1.Size = new System.Drawing.Size(124, 115);
+            this.Imagen1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Imagen1.TabIndex = 0;
+            this.Imagen1.TabStop = false;
+            // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Gainsboro;
@@ -142,6 +152,15 @@
             this.label6.Size = new System.Drawing.Size(143, 25);
             this.label6.TabIndex = 13;
             this.label6.Text = "Menor ventas";
+            // 
+            // Imagen3
+            // 
+            this.Imagen3.Location = new System.Drawing.Point(60, 72);
+            this.Imagen3.Name = "Imagen3";
+            this.Imagen3.Size = new System.Drawing.Size(124, 115);
+            this.Imagen3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Imagen3.TabIndex = 12;
+            this.Imagen3.TabStop = false;
             // 
             // lblTotalPedidos
             // 
@@ -225,7 +244,7 @@
             this.groupBox5.Controls.Add(this.label12);
             this.groupBox5.Controls.Add(this.label11);
             this.groupBox5.Controls.Add(this.button4);
-            this.groupBox5.Controls.Add(this.button3);
+            this.groupBox5.Controls.Add(this.btnUsuarios);
             this.groupBox5.Controls.Add(this.label10);
             this.groupBox5.Controls.Add(this.label9);
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -234,6 +253,49 @@
             this.groupBox5.Size = new System.Drawing.Size(536, 262);
             this.groupBox5.TabIndex = 13;
             this.groupBox5.TabStop = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.label7.Location = new System.Drawing.Point(359, 178);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(166, 40);
+            this.label7.TabIndex = 25;
+            this.label7.Text = "Modificar sandwich \r\npredeterminado";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(359, 88);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(112, 20);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "Listar ventas";
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Gainsboro;
+            this.button2.BackgroundImage = global::Practica_final_PVA.Properties.Resources._d038b030_4cad_439e_a242_2ccef4c09934;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.Location = new System.Drawing.Point(285, 158);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(68, 75);
+            this.button2.TabIndex = 23;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // btnListarVentas
+            // 
+            this.btnListarVentas.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnListarVentas.BackgroundImage = global::Practica_final_PVA.Properties.Resources.icono_registrar_ventas;
+            this.btnListarVentas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnListarVentas.Location = new System.Drawing.Point(285, 59);
+            this.btnListarVentas.Name = "btnListarVentas";
+            this.btnListarVentas.Size = new System.Drawing.Size(68, 75);
+            this.btnListarVentas.TabIndex = 22;
+            this.btnListarVentas.UseVisualStyleBackColor = false;
+            this.btnListarVentas.Click += new System.EventHandler(this.btnListarVentas_Click);
             // 
             // label12
             // 
@@ -254,6 +316,29 @@
             this.label11.Size = new System.Drawing.Size(80, 20);
             this.label11.TabIndex = 20;
             this.label11.Text = "Usuarios";
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Gainsboro;
+            this.button4.BackgroundImage = global::Practica_final_PVA.Properties.Resources._5aaa66a8_dda6_4885_923e_b485eb32641e;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button4.Location = new System.Drawing.Point(12, 158);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(68, 75);
+            this.button4.TabIndex = 19;
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // btnUsuarios
+            // 
+            this.btnUsuarios.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnUsuarios.BackgroundImage = global::Practica_final_PVA.Properties.Resources._fe78f90a_0a69_4c96_9cb8_a70c614de56b;
+            this.btnUsuarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnUsuarios.Location = new System.Drawing.Point(12, 57);
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Size = new System.Drawing.Size(68, 75);
+            this.btnUsuarios.TabIndex = 18;
+            this.btnUsuarios.UseVisualStyleBackColor = false;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
             // label10
             // 
@@ -306,26 +391,6 @@
             this.groupBox7.TabIndex = 17;
             this.groupBox7.TabStop = false;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(359, 88);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 20);
-            this.label3.TabIndex = 24;
-            this.label3.Text = "Listar ventas";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(359, 178);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(166, 40);
-            this.label7.TabIndex = 25;
-            this.label7.Text = "Modificar sandwich \r\npredeterminado";
-            // 
             // Imagen2
             // 
             this.Imagen2.Image = global::Practica_final_PVA.Properties.Resources.icono_imagen1;
@@ -335,70 +400,6 @@
             this.Imagen2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Imagen2.TabIndex = 0;
             this.Imagen2.TabStop = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Gainsboro;
-            this.button2.BackgroundImage = global::Practica_final_PVA.Properties.Resources._d038b030_4cad_439e_a242_2ccef4c09934;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.Location = new System.Drawing.Point(285, 158);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(68, 75);
-            this.button2.TabIndex = 23;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // btnListarVentas
-            // 
-            this.btnListarVentas.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnListarVentas.BackgroundImage = global::Practica_final_PVA.Properties.Resources.icono_registrar_ventas;
-            this.btnListarVentas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnListarVentas.Location = new System.Drawing.Point(285, 59);
-            this.btnListarVentas.Name = "btnListarVentas";
-            this.btnListarVentas.Size = new System.Drawing.Size(68, 75);
-            this.btnListarVentas.TabIndex = 22;
-            this.btnListarVentas.UseVisualStyleBackColor = false;
-            this.btnListarVentas.Click += new System.EventHandler(this.btnListarVentas_Click);
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Gainsboro;
-            this.button4.BackgroundImage = global::Practica_final_PVA.Properties.Resources._5aaa66a8_dda6_4885_923e_b485eb32641e;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button4.Location = new System.Drawing.Point(12, 158);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(68, 75);
-            this.button4.TabIndex = 19;
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Gainsboro;
-            this.button3.BackgroundImage = global::Practica_final_PVA.Properties.Resources._fe78f90a_0a69_4c96_9cb8_a70c614de56b;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.Location = new System.Drawing.Point(12, 57);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(68, 75);
-            this.button3.TabIndex = 18;
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // Imagen3
-            // 
-            this.Imagen3.Location = new System.Drawing.Point(60, 72);
-            this.Imagen3.Name = "Imagen3";
-            this.Imagen3.Size = new System.Drawing.Size(124, 115);
-            this.Imagen3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Imagen3.TabIndex = 12;
-            this.Imagen3.TabStop = false;
-            // 
-            // Imagen1
-            // 
-            this.Imagen1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Imagen1.Location = new System.Drawing.Point(48, 72);
-            this.Imagen1.Name = "Imagen1";
-            this.Imagen1.Size = new System.Drawing.Size(124, 115);
-            this.Imagen1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Imagen1.TabIndex = 0;
-            this.Imagen1.TabStop = false;
             // 
             // btnPerfil
             // 
@@ -435,8 +436,10 @@
             this.Text = "Sandwich Sprint - Panel admin";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Imagen1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Imagen3)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox5.ResumeLayout(false);
@@ -446,8 +449,6 @@
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Imagen2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Imagen3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Imagen1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -477,7 +478,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnUsuarios;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox Imagen2;

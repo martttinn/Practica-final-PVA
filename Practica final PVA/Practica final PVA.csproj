@@ -75,6 +75,12 @@
     </Compile>
     <Compile Include="gestorSesion.cs" />
     <Compile Include="Ingrediente.cs" />
+    <Compile Include="ListarUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListarUsuarios.Designer.cs">
+      <DependentUpon>ListarUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListarVentas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormularioAdmin.resx">
       <DependentUpon>FormularioAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListarUsuarios.resx">
+      <DependentUpon>ListarUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListarVentas.resx">
       <DependentUpon>ListarVentas.cs</DependentUpon>
