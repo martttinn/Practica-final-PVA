@@ -52,7 +52,7 @@
             this.btnListarVentas = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnAdministrador = new System.Windows.Forms.Button();
             this.btnUsuarios = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -243,7 +243,7 @@
             this.groupBox5.Controls.Add(this.btnListarVentas);
             this.groupBox5.Controls.Add(this.label12);
             this.groupBox5.Controls.Add(this.label11);
-            this.groupBox5.Controls.Add(this.button4);
+            this.groupBox5.Controls.Add(this.btnAdministrador);
             this.groupBox5.Controls.Add(this.btnUsuarios);
             this.groupBox5.Controls.Add(this.label10);
             this.groupBox5.Controls.Add(this.label9);
@@ -317,16 +317,17 @@
             this.label11.TabIndex = 20;
             this.label11.Text = "Usuarios";
             // 
-            // button4
+            // btnAdministrador
             // 
-            this.button4.BackColor = System.Drawing.Color.Gainsboro;
-            this.button4.BackgroundImage = global::Practica_final_PVA.Properties.Resources._5aaa66a8_dda6_4885_923e_b485eb32641e;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button4.Location = new System.Drawing.Point(12, 158);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(68, 75);
-            this.button4.TabIndex = 19;
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnAdministrador.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnAdministrador.BackgroundImage = global::Practica_final_PVA.Properties.Resources._5aaa66a8_dda6_4885_923e_b485eb32641e;
+            this.btnAdministrador.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAdministrador.Location = new System.Drawing.Point(12, 158);
+            this.btnAdministrador.Name = "btnAdministrador";
+            this.btnAdministrador.Size = new System.Drawing.Size(68, 75);
+            this.btnAdministrador.TabIndex = 19;
+            this.btnAdministrador.UseVisualStyleBackColor = false;
+            this.btnAdministrador.Click += new System.EventHandler(this.btnAdministrador_Click);
             // 
             // btnUsuarios
             // 
@@ -477,7 +478,7 @@
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnAdministrador;
         private System.Windows.Forms.Button btnUsuarios;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;

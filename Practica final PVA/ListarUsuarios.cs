@@ -11,6 +11,25 @@ namespace Practica_final_PVA
         {
             InitializeComponent();
             ObtenerFilasList();
+            ObtenerNumeroTotalUsuarios();
+        }
+
+        private void ObtenerNumeroTotalUsuarios()
+        {
+            string connectionString = "server=(local)\\SQLEXPRESS;database=master; Integrated Security = SSPI";
+            string query = "SELECT COUNT(*) AS TotalUsuarios FROM Usuarios WHERE Admin = @admin";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string fs = "False";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@admin", fs);
+                connection.Open();
+
+                int totalVentas = (int)command.ExecuteScalar();
+
+                lblTotalUsuarios.Text = totalVentas.ToString();
+            }
         }
 
         private void CrearTablaSoloUsuarios()

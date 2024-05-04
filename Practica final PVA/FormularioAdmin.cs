@@ -225,6 +225,13 @@ namespace Practica_final_PVA
             ListarUsuarios listarUsuarios = new ListarUsuarios();
             listarUsuarios.Show();
         }
+
+        private void btnAdministrador_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            ListarAdministradores listarAdministradores = new ListarAdministradores();
+            listarAdministradores.Show();
+        }
     }
 
 }
