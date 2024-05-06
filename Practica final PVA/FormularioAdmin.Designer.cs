@@ -279,7 +279,7 @@
             this.btnInsertarSandwich.Size = new System.Drawing.Size(68, 75);
             this.btnInsertarSandwich.TabIndex = 23;
             this.btnInsertarSandwich.UseVisualStyleBackColor = false;
-            this.btnInsertarSandwich.Click += new System.EventHandler(this.btnModificarSandwich_Click);
+            this.btnInsertarSandwich.Click += new System.EventHandler(this.btnInsertarSandwich_Click);
             // 
             // btnListarVentas
             // 

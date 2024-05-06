@@ -1,6 +1,6 @@
 ﻿namespace Practica_final_PVA
 {
-    partial class ModificarSandwichPredeterminado
+    partial class InsertarSandwichPredeterminado
     {
         /// <summary>
         /// Required designer variable.
@@ -49,6 +49,12 @@
             this.btnSandwich7 = new System.Windows.Forms.Button();
             this.btnSandwich8 = new System.Windows.Forms.Button();
             this.btnSandwich9 = new System.Windows.Forms.Button();
+            this.txtNuevoNombre = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtNuevoPrecio = new System.Windows.Forms.TextBox();
+            this.btnAgregarSandwich = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -58,13 +64,13 @@
             this.label1.ForeColor = System.Drawing.Color.Cornsilk;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(276, 40);
+            this.label1.Size = new System.Drawing.Size(250, 40);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Modificar Sandwich";
+            this.label1.Text = "Insertar Sandwich";
             // 
             // btnCerrar
             // 
-            this.btnCerrar.Location = new System.Drawing.Point(623, 522);
+            this.btnCerrar.Location = new System.Drawing.Point(932, 522);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(89, 33);
             this.btnCerrar.TabIndex = 18;
@@ -167,11 +173,11 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label11.Location = new System.Drawing.Point(230, 433);
+            this.label11.Location = new System.Drawing.Point(231, 412);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(414, 40);
+            this.label11.Size = new System.Drawing.Size(342, 80);
             this.label11.TabIndex = 28;
-            this.label11.Text = "Elija el sandwich a modificar!!";
+            this.label11.Text = "Cree un nuevo sandwich \r\npredeterminado!!";
             // 
             // btnSandwich1
             // 
@@ -263,12 +269,73 @@
             this.btnSandwich9.TabIndex = 37;
             this.btnSandwich9.UseVisualStyleBackColor = true;
             // 
-            // ModificarSandwichPredeterminado
+            // txtNuevoNombre
+            // 
+            this.txtNuevoNombre.Location = new System.Drawing.Point(790, 144);
+            this.txtNuevoNombre.Name = "txtNuevoNombre";
+            this.txtNuevoNombre.Size = new System.Drawing.Size(174, 26);
+            this.txtNuevoNombre.TabIndex = 38;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.ForeColor = System.Drawing.Color.Cornsilk;
+            this.label12.Location = new System.Drawing.Point(790, 118);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(160, 20);
+            this.label12.TabIndex = 39;
+            this.label12.Text = "Nombre del sandwich";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Bold);
+            this.label13.ForeColor = System.Drawing.Color.Cornsilk;
+            this.label13.Location = new System.Drawing.Point(756, 60);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(230, 40);
+            this.label13.TabIndex = 40;
+            this.label13.Text = "Nuevo Sandwich";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.ForeColor = System.Drawing.Color.Cornsilk;
+            this.label14.Location = new System.Drawing.Point(790, 200);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(148, 20);
+            this.label14.TabIndex = 42;
+            this.label14.Text = "Precio del sandwich";
+            // 
+            // txtNuevoPrecio
+            // 
+            this.txtNuevoPrecio.Location = new System.Drawing.Point(790, 226);
+            this.txtNuevoPrecio.Name = "txtNuevoPrecio";
+            this.txtNuevoPrecio.Size = new System.Drawing.Size(174, 26);
+            this.txtNuevoPrecio.TabIndex = 41;
+            // 
+            // btnAgregarSandwich
+            // 
+            this.btnAgregarSandwich.Location = new System.Drawing.Point(804, 273);
+            this.btnAgregarSandwich.Name = "btnAgregarSandwich";
+            this.btnAgregarSandwich.Size = new System.Drawing.Size(146, 32);
+            this.btnAgregarSandwich.TabIndex = 43;
+            this.btnAgregarSandwich.Text = "Agregar sanwich";
+            this.btnAgregarSandwich.UseVisualStyleBackColor = true;
+            this.btnAgregarSandwich.Click += new System.EventHandler(this.btnAgregarSandwich_Click);
+            // 
+            // InsertarSandwichPredeterminado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(30)))), ((int)(((byte)(11)))));
-            this.ClientSize = new System.Drawing.Size(724, 567);
+            this.ClientSize = new System.Drawing.Size(1031, 567);
+            this.Controls.Add(this.btnAgregarSandwich);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.txtNuevoPrecio);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.txtNuevoNombre);
             this.Controls.Add(this.btnSandwich9);
             this.Controls.Add(this.btnSandwich8);
             this.Controls.Add(this.btnSandwich7);
@@ -290,8 +357,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.label1);
-            this.Name = "ModificarSandwichPredeterminado";
-            this.Text = "ModificarSandwichPredeterminado";
+            this.Name = "InsertarSandwichPredeterminado";
+            this.Text = "InsertarSandwichPredeterminado";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -320,5 +387,11 @@
         private System.Windows.Forms.Button btnSandwich7;
         private System.Windows.Forms.Button btnSandwich8;
         private System.Windows.Forms.Button btnSandwich9;
+        private System.Windows.Forms.TextBox txtNuevoNombre;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox txtNuevoPrecio;
+        private System.Windows.Forms.Button btnAgregarSandwich;
     }
 }
