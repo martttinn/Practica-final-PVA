@@ -126,56 +126,56 @@ namespace Practica_final_PVA
         }
 
         private void ObtenerSandwichMenosVendido()
-{
-    string connectionString = "server=(local)\\SQLEXPRESS;database=master; Integrated Security = SSPI";
-    string query = @"
-        SELECT NomProducto, COUNT(V.Id) AS Ventas 
-        FROM DETALLESVENTA DV
-        LEFT JOIN VENTAS V ON DV.IDVenta = V.Id
-        GROUP BY NomProducto
-        ORDER BY Ventas ASC";
-
-    using (SqlConnection connection = new SqlConnection(connectionString))
-    {
-        SqlCommand command = new SqlCommand(query, connection);
-        connection.Open();
-
-        SqlDataReader reader = command.ExecuteReader();
-
-        if (reader.HasRows)
         {
-            string sandwichMenosVendido = null;
-            int minVentas = int.MaxValue;
+            string connectionString = "server=(local)\\SQLEXPRESS;database=master; Integrated Security = SSPI";
+            string query = @"
+            SELECT NomProducto, COUNT(V.Id) AS Ventas 
+            FROM DETALLESVENTA DV
+            LEFT JOIN VENTAS V ON DV.IDVenta = V.Id
+            GROUP BY NomProducto
+            ORDER BY Ventas ASC";
 
-            while (reader.Read())
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string sandwich = reader["NomProducto"].ToString();
-                int ventas = Convert.ToInt32(reader["Ventas"]);
+                SqlCommand command = new SqlCommand(query, connection);
+                connection.Open();
 
-                if (ventas < minVentas || (ventas == 0 && sandwichMenosVendido == null))
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.HasRows)
                 {
-                    sandwichMenosVendido = sandwich;
-                    minVentas = ventas;
+                    string sandwichMenosVendido = null;
+                    int minVentas = int.MaxValue;
+
+                    while (reader.Read())
+                    {
+                        string sandwich = reader["NomProducto"].ToString();
+                        int ventas = Convert.ToInt32(reader["Ventas"]);
+
+                        if (ventas < minVentas || (ventas == 0 && sandwichMenosVendido == null))
+                        {
+                            sandwichMenosVendido = sandwich;
+                            minVentas = ventas;
+                        }
+                    }
+
+                    if (!string.IsNullOrEmpty(sandwichMenosVendido))
+                    {
+                        CargarImagenSandwich(sandwichMenosVendido, Imagen3);
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontraron ventas.");
+                    }
                 }
-            }
+                else
+                {
+                    MessageBox.Show("No se encontraron ventas.");
+                }
 
-            if (!string.IsNullOrEmpty(sandwichMenosVendido))
-            {
-                CargarImagenSandwich(sandwichMenosVendido, Imagen3);
-            }
-            else
-            {
-                MessageBox.Show("No se encontraron ventas.");
+                reader.Close();
             }
         }
-        else
-        {
-            MessageBox.Show("No se encontraron ventas.");
-        }
-
-        reader.Close();
-    }
-}
 
 
 

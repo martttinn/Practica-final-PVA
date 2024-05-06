@@ -82,7 +82,6 @@ namespace Practica_final_PVA
 
         private void ActualizarTablaOrdenada()
         {
-            // Truncar la tabla existente para eliminar los datos antiguos
             string connectionString = "server=(local)\\SQLEXPRESS;database=master; Integrated Security = SSPI";
             string truncateQuery = "TRUNCATE TABLE TablaOrdenada";
 
@@ -93,7 +92,6 @@ namespace Practica_final_PVA
                 truncateCommand.ExecuteNonQuery();
             }
 
-            // Insertar los datos actualizados ordenados por fecha de venta
             string insertQuery = @"
             INSERT INTO TablaOrdenada (FechaVenta, NomProducto, PrecioTotal, DNI)
             SELECT V.FechaVenta, DV.NomProducto, V.PrecioTotal, V.DNI
