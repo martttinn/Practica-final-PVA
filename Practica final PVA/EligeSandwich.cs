@@ -299,16 +299,22 @@ namespace Practica_final_PVA
             worksheet.Cells[indiceFila, 1] = "Precio Total:";
             worksheet.Cells[indiceFila, 3] = lblPrecioTotal.Text;
 
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Archivos de Excel (*.xlsx)|*.xlsx";
+            saveFileDialog.FileName = "Factura.xlsx";
 
-            string NomArchivo = "Factura.xlsx";
-            workbook.SaveAs(NomArchivo);
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string NomArchivo = saveFileDialog.FileName;
+                workbook.SaveAs(NomArchivo);
 
-            
-            workbook.Close();
-            excelApp.Quit();
-            System.Runtime.InteropServices.Marshal.ReleaseComObject(excelApp);
+                workbook.Close();
+                excelApp.Quit();
+                System.Runtime.InteropServices.Marshal.ReleaseComObject(excelApp);
 
-            MessageBox.Show("Factura exportada con exito a Excel", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Factura exportada con éxito a Excel", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
         }
     }
 }

@@ -201,7 +201,7 @@ namespace Practica_final_PVA
             Excel.Worksheet worksheet = workbook.ActiveSheet;
 
 
-            worksheet.Cells[1, 1] = "Nombre";
+            worksheet.Cells[1, 1] = "Producto";
             worksheet.Cells[1, 2] = "Cantidad";
             worksheet.Cells[1, 3] = "Precio";
 
@@ -209,7 +209,7 @@ namespace Practica_final_PVA
             int indiceFila = 2;
             foreach (ListViewItem item in lvSandwich.Items)
             {
-                worksheet.Cells[indiceFila, 1] = item.SubItems[0].Text; // Nombre
+                worksheet.Cells[indiceFila, 1] = item.SubItems[0].Text; // Producto
                 worksheet.Cells[indiceFila, 2] = item.SubItems[1].Text; // Cantidad
                 worksheet.Cells[indiceFila, 3] = item.SubItems[2].Text; // Precio
                 indiceFila++;
@@ -218,16 +218,22 @@ namespace Practica_final_PVA
             worksheet.Cells[indiceFila, 1] = "Precio Total:";
             worksheet.Cells[indiceFila, 3] = lblPrecioTotal.Text;
 
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Archivos de Excel (*.xlsx)|*.xlsx";
+            saveFileDialog.FileName = "Factura.xlsx";
 
-            string NomArchivo = "Factura.xlsx";
-            workbook.SaveAs(NomArchivo);
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string NomArchivo = saveFileDialog.FileName;
+                workbook.SaveAs(NomArchivo);
 
-            
-            workbook.Close();
-            excelApp.Quit();
-            System.Runtime.InteropServices.Marshal.ReleaseComObject(excelApp);
+                workbook.Close();
+                excelApp.Quit();
+                System.Runtime.InteropServices.Marshal.ReleaseComObject(excelApp);
 
-            MessageBox.Show("Factura exportada con exito a Excel", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Factura exportada con éxito a Excel", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
         }
 
         private void registrarVenta()
