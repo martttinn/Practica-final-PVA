@@ -1,14 +1,6 @@
-﻿using Microsoft.Vbe.Interop;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Practica_final_PVA
@@ -19,8 +11,7 @@ namespace Practica_final_PVA
         {
             InitializeComponent();
             ObtenerNumeroTotalVentas();
-            ObtenerPrimeraFilaList();
-            ObtenerRestoFilas();
+            ObtenerFilasList();
         }
 
         private int ObtenerNumeroTotalVentas()
@@ -47,81 +38,23 @@ namespace Practica_final_PVA
             formularioAdmin.Show();
         }
 
-        private int Conteo = 1;
-        private void ObtenerPrimeraFilaList()
-        {
-            string connectionString = "server=(local)\\SQLEXPRESS;database=master; Integrated Security = SSPI";
-            string query = "SELECT Id FROM VENTAS ORDER BY FechaVenta ASC";
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                SqlCommand command = new SqlCommand(query, connection);
-                connection.Open();
-
-                int Id = (int)command.ExecuteScalar();
-
-                string query2 = "SELECT FechaVenta FROM VENTAS WHERE Id = @ID";
-
-                SqlCommand command2 = new SqlCommand(query2, connection);
-                command2.Parameters.AddWithValue("@ID", Id);
-
-                DateTime fechaVenta = (DateTime)command2.ExecuteScalar();
-
-                string query3 = @"
-                SELECT DV.NomProducto AS Producto
-                FROM DETALLESVENTA DV
-                INNER JOIN VENTAS V ON DV.IDVenta = V.Id
-                WHERE DV.IDVenta = @ID";
-
-                SqlCommand command3 = new SqlCommand(query3, connection);
-                command3.Parameters.AddWithValue("@ID", Id);
-
-                string nombre = (string)command3.ExecuteScalar();
-
-                string query4 = "SELECT PrecioTotal FROM VENTAS WHERE Id = @Id";
-
-                SqlCommand command4 = new SqlCommand(query4, connection);
-                command4.Parameters.AddWithValue("@Id", Id);
-
-                decimal precio = (decimal)command4.ExecuteScalar();
-
-                string query5 = "SELECT DNI FROM VENTAS WHERE Id = @iD";
-
-                SqlCommand command5 = new SqlCommand(query5, connection);
-                command5.Parameters.AddWithValue("@iD", Id);
-
-                string DNI = (string)command5.ExecuteScalar();
-
-                ListViewItem item = new ListViewItem(Conteo.ToString());
-                item.SubItems.Add(nombre.ToString());
-                item.SubItems.Add(fechaVenta.ToShortDateString());
-                item.SubItems.Add(precio.ToString());
-                item.SubItems.Add(DNI.ToString());
-                listView1.Items.Add(item);
-            }
-        }
-
         private void CrearTablaOrdenadaEnServidor()
         {
             string connectionString = "server=(local)\\SQLEXPRESS;database=master; Integrated Security = SSPI";
             string query = @"
-            CREATE TABLE #TablaTemporal (
-            ID INT IDENTITY(1,1),
-            FechaVenta DATETIME
-            )
+                CREATE TABLE TablaOrdenada (
+                ID INT IDENTITY(1,1),
+                FechaVenta DATETIME,
+                NomProducto NVARCHAR(100),
+                PrecioTotal DECIMAL(18,2),
+                DNI NVARCHAR(20)
+                )
 
-            INSERT INTO #TablaTemporal (FechaVenta)
-            SELECT FechaVenta FROM VENTAS ORDER BY FechaVenta ASC
-
-            CREATE TABLE TablaOrdenada (
-            ID INT IDENTITY(1,1),
-            FechaVenta DATETIME
-            )
-
-            INSERT INTO TablaOrdenada (FechaVenta)
-            SELECT FechaVenta FROM #TablaTemporal
-
-            DROP TABLE #TablaTemporal";
+                INSERT INTO TablaOrdenada (FechaVenta, NomProducto, PrecioTotal, DNI)
+                SELECT V.FechaVenta, DV.NomProducto, V.PrecioTotal, V.DNI
+                FROM VENTAS V
+                INNER JOIN DETALLESVENTA DV ON V.Id = DV.IDVenta
+                ORDER BY V.FechaVenta ASC";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -147,72 +80,82 @@ namespace Practica_final_PVA
             }
         }
 
-        private void ObtenerRestoFilas()
+        private void ActualizarTablaOrdenada()
+        {
+            // Truncar la tabla existente para eliminar los datos antiguos
+            string connectionString = "server=(local)\\SQLEXPRESS;database=master; Integrated Security = SSPI";
+            string truncateQuery = "TRUNCATE TABLE TablaOrdenada";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand truncateCommand = new SqlCommand(truncateQuery, connection);
+                connection.Open();
+                truncateCommand.ExecuteNonQuery();
+            }
+
+            // Insertar los datos actualizados ordenados por fecha de venta
+            string insertQuery = @"
+            INSERT INTO TablaOrdenada (FechaVenta, NomProducto, PrecioTotal, DNI)
+            SELECT V.FechaVenta, DV.NomProducto, V.PrecioTotal, V.DNI
+            FROM VENTAS V
+            INNER JOIN DETALLESVENTA DV ON V.Id = DV.IDVenta
+            ORDER BY V.FechaVenta ASC";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand insertCommand = new SqlCommand(insertQuery, connection);
+                connection.Open();
+                insertCommand.ExecuteNonQuery();
+            }
+        }
+
+
+        private void ObtenerFilasList()
         {
             if (!TablaOrdenadaExiste())
             {
                 CrearTablaOrdenadaEnServidor();
             }
-
-            int totalPedidos = ObtenerNumeroTotalVentas();
-
-            for (int IdSiguiente = 2; IdSiguiente <= totalPedidos; IdSiguiente++)
+            else
             {
-                string connectionString = "server=(local)\\SQLEXPRESS;database=master; Integrated Security = SSPI";
-                string queryFecha = "SELECT FechaVenta FROM TablaOrdenada WHERE ID = @Ident";
-                string queryId = "SELECT Id FROM VENTAS WHERE FechaVenta = @Fecha";
-                string queryNombre = "SELECT DV.NomProducto AS Producto FROM DETALLESVENTA DV INNER JOIN VENTAS V ON DV.IDVenta = V.Id WHERE DV.IDVenta = @ID";
-                string queryPrecio = "SELECT PrecioTotal FROM VENTAS WHERE Id = @Id";
-                string queryDNI = "SELECT DNI FROM VENTAS WHERE Id = @iD";
+                ActualizarTablaOrdenada();
+            }
 
-                using (SqlConnection connection = new SqlConnection(connectionString))
+            string connectionString = "server=(local)\\SQLEXPRESS;database=master; Integrated Security = SSPI";
+            string query = "SELECT * FROM TablaOrdenada";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+
+                try
                 {
-                    try
+                    connection.Open();
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    while (reader.Read())
                     {
-                        connection.Open();
+                        string IdSiguiente = reader["ID"].ToString();
+                        string nombre = reader["NomProducto"].ToString();
+                        DateTime fecha = (DateTime)reader["FechaVenta"];
+                        string precio = reader["PrecioTotal"].ToString();
+                        string DNI = reader["DNI"].ToString();
 
-                        // Obtener fecha de venta
-                        SqlCommand commandFecha = new SqlCommand(queryFecha, connection);
-                        commandFecha.Parameters.AddWithValue("@Ident", IdSiguiente);
-                        object fechaObject  = commandFecha.ExecuteScalar();
-                        DateTime fecha = Convert.ToDateTime(fechaObject);
-
-                        // Obtener ID de venta
-                        SqlCommand commandId = new SqlCommand(queryId, connection);
-                        commandId.Parameters.AddWithValue("@Fecha", fecha);
-                        int Id = (int)commandId.ExecuteScalar();
-
-                        // Obtener nombre de producto
-                        SqlCommand commandNombre = new SqlCommand(queryNombre, connection);
-                        commandNombre.Parameters.AddWithValue("@ID", Id);
-                        string nombre = (string)commandNombre.ExecuteScalar();
-
-                        // Obtener precio total
-                        SqlCommand commandPrecio = new SqlCommand(queryPrecio, connection);
-                        commandPrecio.Parameters.AddWithValue("@Id", Id);
-                        decimal precio = (decimal)commandPrecio.ExecuteScalar();
-
-                        // Obtener DNI
-                        SqlCommand commandDNI = new SqlCommand(queryDNI, connection);
-                        commandDNI.Parameters.AddWithValue("@iD", Id);
-                        string DNI = (string)commandDNI.ExecuteScalar();
-
-                        // Agregar fila a ListView
-                        ListViewItem item = new ListViewItem(IdSiguiente.ToString());
+                        ListViewItem item = new ListViewItem(IdSiguiente);
                         item.SubItems.Add(nombre);
                         item.SubItems.Add(fecha.ToShortDateString());
-                        item.SubItems.Add(precio.ToString());
+                        item.SubItems.Add(precio);
                         item.SubItems.Add(DNI);
                         listView1.Items.Add(item);
                     }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error: " + ex.Message);
-                    }
+
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
                 }
             }
         }
-
-
     }
 }

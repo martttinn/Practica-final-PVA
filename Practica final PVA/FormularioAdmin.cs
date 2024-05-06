@@ -51,25 +51,25 @@ namespace Practica_final_PVA
                 case "Sandwich barbacoa":
                     pictureBox.Image = Properties.Resources.Sandwich_1;
                     break;
-                case "Sandwich de atun":
+                case "Sandwich atun":
                     pictureBox.Image = Properties.Resources.Sandwich_2;
                     break;
-                case "Sandwich de carbonara":
+                case "Sandwich carbonara":
                     pictureBox.Image = Properties.Resources.Sandwich_3;
                     break;
-                case "Sandwich de cebolla":
+                case "Sandwich cebolla":
                     pictureBox.Image = Properties.Resources.Sandwich_4;
                     break;
-                case "Sandwich de chorizo":
+                case "Sandwich chorizo":
                     pictureBox.Image = Properties.Resources.Sandwich_5;
                     break;
-                case "Sandwich de jamon":
+                case "Sandwich jamon":
                     pictureBox.Image = Properties.Resources.Sandwich_6;
                     break;
-                case "Sandwich de pechuga":
+                case "Sandwich pechuga":
                     pictureBox.Image = Properties.Resources.Sandwich_7;
                     break;
-                case "Sandwich de salchicha":
+                case "Sandwich salchicha":
                     pictureBox.Image = Properties.Resources.Sandwich_8;
                     break;
                 case "Sandwich jamon york":
