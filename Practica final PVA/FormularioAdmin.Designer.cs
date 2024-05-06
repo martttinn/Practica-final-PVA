@@ -202,10 +202,10 @@
             // lblIngredienteTop
             // 
             this.lblIngredienteTop.AutoSize = true;
-            this.lblIngredienteTop.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIngredienteTop.Location = new System.Drawing.Point(51, 26);
+            this.lblIngredienteTop.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIngredienteTop.Location = new System.Drawing.Point(64, 28);
             this.lblIngredienteTop.Name = "lblIngredienteTop";
-            this.lblIngredienteTop.Size = new System.Drawing.Size(173, 46);
+            this.lblIngredienteTop.Size = new System.Drawing.Size(139, 37);
             this.lblIngredienteTop.TabIndex = 15;
             this.lblIngredienteTop.Text = "Ejemplo";
             // 
