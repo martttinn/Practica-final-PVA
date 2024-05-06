@@ -2,6 +2,7 @@
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Drawing;
+using System.Collections.Generic;
 
 namespace Practica_final_PVA
 {
@@ -32,7 +33,7 @@ namespace Practica_final_PVA
                 {
                     reader.Read();
                     string sandwichMasVendido = reader["NomProducto"].ToString();
-                   // MessageBox.Show($"El pedido mas vendido es: " + sandwichMasVendido);
+                  //  MessageBox.Show($"El pedido mas vendido es: " + sandwichMasVendido);
 
                     CargarImagenSandwich(sandwichMasVendido, Imagen1);
                 }
@@ -49,31 +50,31 @@ namespace Practica_final_PVA
             switch (nombreSandwich)
             {
                 case "Sandwich barbacoa":
-                    pictureBox.Image = Properties.Resources.Sandwich_1;
+                    pictureBox.Image = Properties.Resources.Sandwich_8;
                     break;
                 case "Sandwich atun":
-                    pictureBox.Image = Properties.Resources.Sandwich_2;
+                    pictureBox.Image = Properties.Resources.Sandwich_3;
                     break;
                 case "Sandwich carbonara":
-                    pictureBox.Image = Properties.Resources.Sandwich_3;
+                    pictureBox.Image = Properties.Resources.Sandwich_2;
                     break;
                 case "Sandwich cebolla":
                     pictureBox.Image = Properties.Resources.Sandwich_4;
                     break;
                 case "Sandwich chorizo":
-                    pictureBox.Image = Properties.Resources.Sandwich_5;
+                    pictureBox.Image = Properties.Resources.Sandwich_1;
                     break;
                 case "Sandwich jamon":
-                    pictureBox.Image = Properties.Resources.Sandwich_6;
-                    break;
-                case "Sandwich pechuga":
                     pictureBox.Image = Properties.Resources.Sandwich_7;
                     break;
+                case "Sandwich pechuga":
+                    pictureBox.Image = Properties.Resources.Sandwich_9;
+                    break;
                 case "Sandwich salchicha":
-                    pictureBox.Image = Properties.Resources.Sandwich_8;
+                    pictureBox.Image = Properties.Resources.Sandwich_5;
                     break;
                 case "Sandwich jamon york":
-                    pictureBox.Image = Properties.Resources.Sandwich_9;
+                    pictureBox.Image = Properties.Resources.Sandwich_6;
                     break;
                 default:
                     MessageBox.Show("Imagen no encontrada.");
@@ -125,30 +126,58 @@ namespace Practica_final_PVA
         }
 
         private void ObtenerSandwichMenosVendido()
+{
+    string connectionString = "server=(local)\\SQLEXPRESS;database=master; Integrated Security = SSPI";
+    string query = @"
+        SELECT NomProducto, COUNT(V.Id) AS Ventas 
+        FROM DETALLESVENTA DV
+        LEFT JOIN VENTAS V ON DV.IDVenta = V.Id
+        GROUP BY NomProducto
+        ORDER BY Ventas ASC";
+
+    using (SqlConnection connection = new SqlConnection(connectionString))
+    {
+        SqlCommand command = new SqlCommand(query, connection);
+        connection.Open();
+
+        SqlDataReader reader = command.ExecuteReader();
+
+        if (reader.HasRows)
         {
-            string connectionString = "server=(local)\\SQLEXPRESS;database=master; Integrated Security = SSPI";
-            string query = "SELECT TOP 1 NomProducto FROM DETALLESVENTA GROUP BY NomProducto ORDER BY COUNT(*) ASC";
+            string sandwichMenosVendido = null;
+            int minVentas = int.MaxValue;
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            while (reader.Read())
             {
-                SqlCommand command = new SqlCommand(query, connection);
-                connection.Open();
+                string sandwich = reader["NomProducto"].ToString();
+                int ventas = Convert.ToInt32(reader["Ventas"]);
 
-                SqlDataReader reader = command.ExecuteReader();
-                if (reader.HasRows)
+                if (ventas < minVentas || (ventas == 0 && sandwichMenosVendido == null))
                 {
-                    reader.Read();
-                    string sandwichMenosVendido = reader["NomProducto"].ToString();
+                    sandwichMenosVendido = sandwich;
+                    minVentas = ventas;
+                }
+            }
 
-                    CargarImagenSandwich(sandwichMenosVendido, Imagen3);
-                }
-                else
-                {
-                    MessageBox.Show("No se encontraron ventas.");
-                }
-                reader.Close();
+            if (!string.IsNullOrEmpty(sandwichMenosVendido))
+            {
+                CargarImagenSandwich(sandwichMenosVendido, Imagen3);
+            }
+            else
+            {
+                MessageBox.Show("No se encontraron ventas.");
             }
         }
+        else
+        {
+            MessageBox.Show("No se encontraron ventas.");
+        }
+
+        reader.Close();
+    }
+}
+
+
 
         private void ObtenerIngredienteMasUsado()
         {
