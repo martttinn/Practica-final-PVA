@@ -174,7 +174,8 @@ namespace Practica_final_PVA
                         // Obtener fecha de venta
                         SqlCommand commandFecha = new SqlCommand(queryFecha, connection);
                         commandFecha.Parameters.AddWithValue("@Ident", IdSiguiente);
-                        DateTime fecha = (DateTime)commandFecha.ExecuteScalar();
+                        object fechaObject  = commandFecha.ExecuteScalar();
+                        DateTime fecha = Convert.ToDateTime(fechaObject);
 
                         // Obtener ID de venta
                         SqlCommand commandId = new SqlCommand(queryId, connection);

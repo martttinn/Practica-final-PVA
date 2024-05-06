@@ -261,8 +261,6 @@ namespace Practica_final_PVA
 
                 conexion.Close();
 
-
-                
             }
             catch (Exception ex)
             {
@@ -305,7 +303,7 @@ namespace Practica_final_PVA
             string NomArchivo = "Factura.xlsx";
             workbook.SaveAs(NomArchivo);
 
-
+            
             workbook.Close();
             excelApp.Quit();
             System.Runtime.InteropServices.Marshal.ReleaseComObject(excelApp);
