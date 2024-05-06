@@ -21,7 +21,7 @@ namespace Practica_final_PVA
         private void ObtenerSandwichesMasVendidos()
         {
             string connectionString = "server=(local)\\SQLEXPRESS;database=master; Integrated Security = SSPI";
-            string query = "SELECT TOP 1 NomProducto FROM DETALLESVENTA GROUP BY NomProducto ORDER BY COUNT(*) DESC";
+            string query = "SELECT TOP 2 NomProducto FROM DETALLESVENTA GROUP BY NomProducto ORDER BY COUNT(*) DESC";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -35,7 +35,24 @@ namespace Practica_final_PVA
                     string sandwichMasVendido = reader["NomProducto"].ToString();
                   //  MessageBox.Show($"El pedido mas vendido es: " + sandwichMasVendido);
 
-                    CargarImagenSandwich(sandwichMasVendido, Imagen1);
+                    if (ImagenDisponible(sandwichMasVendido))
+                    {
+                        CargarImagenSandwich(sandwichMasVendido, Imagen1);
+                    }
+                    else
+                    {
+                        if (reader.Read()) // Intentamos leer el siguiente registro
+                        {
+                            string segundoSandwichMasVendido = reader["NomProducto"].ToString();
+                         //   MessageBox.Show($"El segundo pedido mas vendido es: " + segundoSandwichMasVendido);
+
+                            CargarImagenSandwich(segundoSandwichMasVendido, Imagen1);
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se encontraron imágenes disponibles.");
+                        }
+                    }
                 }
                 else
                 {
@@ -80,10 +97,26 @@ namespace Practica_final_PVA
                     MessageBox.Show("Imagen no encontrada.");
                     break;
             }
-       
-
         }
 
+        private bool ImagenDisponible(string nombreSandwich)
+        {
+            switch (nombreSandwich)
+            {
+                case "Sandwich barbacoa":
+                case "Sandwich atun":
+                case "Sandwich carbonara":
+                case "Sandwich cebolla":
+                case "Sandwich chorizo":
+                case "Sandwich jamon":
+                case "Sandwich pechuga":
+                case "Sandwich salchicha":
+                case "Sandwich jamon york":
+                    return true;
+                default:
+                    return false;
+            }
+        }
 
         private void ObtenerNumeroTotalVentas()
         {
@@ -177,8 +210,6 @@ namespace Practica_final_PVA
             }
         }
 
-
-
         private void ObtenerIngredienteMasUsado()
         {
             string connectionString = "server=(local)\\SQLEXPRESS;database=master; Integrated Security = SSPI";
@@ -215,7 +246,6 @@ namespace Practica_final_PVA
             this.Close();
             PerfilAdmin perfilAdmin = new PerfilAdmin();
             perfilAdmin.Show();
-
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
